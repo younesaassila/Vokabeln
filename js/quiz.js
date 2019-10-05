@@ -43,7 +43,7 @@ class Quiz {
 			}
 
 			if (randomIndex != this.index) {
-				this.index = Math.floor(Math.random() * this.vocabulary.length);
+				this.index = randomIndex;
 				break;
 			}
 		}
