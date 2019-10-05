@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap"> 
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/a_style.css" />
+		<link rel="stylesheet" type="text/css" href="css/quiz.css" />
+		<title>Vokabeln!</title>
+	</head>
+	<body>
+		<!-- Navigation Bar -->
+		<div id="nav-placeholder"></div>
+		<!-- Load Navigation Bar -->
+		<script src="js/jquery-3.4.1.js"></script>
+		<script>
+			$(function(){
+				$("#nav-placeholder").load("nav.html");
+			});
+		</script>
+		<!-- Webpage Content -->
+		<div class="page-container">
+			<p class="header" id="header-vocabulary"></p>
+			<input id="textbox-answer" type="text" placeholder="Entrez votre réponse" disabled><br>
+			<p id="feedback-link"><a href="feedback.html">Un problème avec cette traduction ? Clique-ici !</a></p>
+			<button id="button-answer" onclick="quiz.onButtonClick()">Vérifier</button>
+			<p class="info">Tu peux également appuyer sur la touche "Entrée" de ton clavier.</p>
+		</div>
+		<!-- Scripts -->
+		<script src="js/answer.js"></script>
+		<script src="js/quiz.js"></script>
+		<script src="js/game.js"></script>
+	</body>
+</html>
