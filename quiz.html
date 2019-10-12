@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Global Site Tag ‒ Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149451988-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'UA-149451988-2', { 'anonymize_ip': true });
+		</script>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -22,14 +30,16 @@
 		</script>
 		<!-- Webpage Content -->
 		<div class="page-container">
-			<p class="header" id="header-vocabulary"></p>
-			<input id="textbox-answer" type="text" placeholder="Entrez votre réponse" disabled><br>
+			<p id="header-instruction"></p>
+			<p class="header" id="header-word"></p>
+			<input id="text-input" type="text" placeholder="Entrez votre réponse" disabled><br>
 			<p id="feedback-link"><a href="feedback.html">Un problème avec cette traduction ? Clique-ici !</a></p>
-			<button id="button-answer" onclick="quiz.onButtonClick()">Vérifier</button>
+			<button id="button-input" onclick="quiz.onClick()">Vérifier</button>
 			<p class="info">Tu peux également appuyer sur la touche "Entrée" de ton clavier.</p>
 		</div>
 		<!-- Scripts -->
-		<script src="js/answer.js"></script>
+		<script src="js/verified_answer_args.js"></script>
+		<script src="js/question.js"></script>
 		<script src="js/quiz.js"></script>
 		<script src="js/game.js"></script>
 	</body>

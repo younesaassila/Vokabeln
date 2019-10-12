@@ -1,12 +1,15 @@
 {
-    "name": "Raum und Austausch",
-    "vocabulary": [
+    "words": [
+		// Introduction
         { "de": [ "vielseitig" ], "fr": [ "polyvalent" ] },
 		{ "de": [ "Mobilität" ], "fr": [ "mobilité" ] },
 		{ "de": [ "die Jugend", "die Jugendliche" ], "fr": [ "la jeunesse" ] },
 		{ "de": [ "Erfahrung" ], "fr": [ "expérience" ] },
-		{ "de": [ "entdecken" ], "fr": [ "découvrir" ] },
 		{ "de": [ "im Ausland" ], "fr": [ "à l'étranger" ] },
+		// die Reisen
+		{ "de": [ "die Reise" ], "fr": [ "le voyage" ] },
+		{ "de": [ "die Reisen" ], "fr": [ "les voyages" ] },
+		{ "de": [ "entdecken" ], "fr": [ "découvrir" ] },
 		{ "de": [ "ein fremdas Land" ], "fr": [ "un pays étranger" ] },
 		{ "de": [ "das Heimatsland" ], "fr": [ "le pays d'origine" ] },
 		{ "de": [ "das Meer" ], "fr": [ "la mer" ] },
@@ -15,12 +18,8 @@
 		{ "de": [ "die Sonne" ], "fr": [ "le soleil" ] },
 		{ "de": [ "die Welt" ], "fr": [ "le monde" ] },
 		{ "de": [ "communikation" ], "fr": [ "communication" ] },
-		{ "de": [ "die Ferien" ], "fr": [ "les vacances" ] },
 		{ "de": [ "Flugzeug" ], "fr": [ "avion" ] },
-		{ "de": [ "die Reise" ], "fr": [ "le voyage" ] },
-		{ "de": [ "die Reisen" ], "fr": [ "les voyages" ] },
 		{ "de": [ "die Sprachen" ], "fr": [ "les langues" ] },
-		{ "de": [ "die Auswanderung", "Immigration" ], "fr": [ "émigration", "immigration" ] },
 		{ "de": [ "die Sonnenbrille" ], "fr": [ "les lunettes de soleil" ] },
 		{ "de": [ "die Schweiz" ], "fr": [ "la Suisse" ] },
 		{ "de": [ "die Türkei" ], "fr": [ "la Turquie" ] },
@@ -69,6 +68,8 @@
 		{ "de": [ "Heimweh", "Nostalgie" ], "fr": [ "mal du pays", "nostalgie" ] },
 		{ "de": [ "Sehnsucht" ], "fr": [ "envie", "désir", "manque" ] },
 		{ "de": [ "fühlen" ], "fr": [ "sentir", "ressentir" ] },
+		// die Ferien
+		{ "de": [ "die Ferien" ], "fr": [ "les vacances" ] },
 		{ "de": [ "chillen" ], "fr": [ "se détendre", "se relaxer" ] },
 		{ "de": [ "aus dem Alltag gehen", "den Alltag brechen" ], "fr": [ "rompre avec la vie de tous les jours", "rompre avec le quotidien", "sortir de son quotidien" ] },
 		{ "de": [ "reisen" ], "fr": [ "voyager" ] },
@@ -90,10 +91,11 @@
 		{ "de": [ "auf der Universität", "auf die Hochschule" ], "fr": [ "à l'université" ] },
 		{ "de": [ "mit einem Austausch" ], "fr": [ "avec un échange" ] },
 		{ "de": [ "ein Gap Jahr machen" ], "fr": [ "faire une année sabbatique", "faire une année de césure" ] },
+		// die Auswanderung
+		{ "de": [ "die Auswanderung", "Immigration" ], "fr": [ "émigration", "immigration" ] },
 		{ "de": [ "die Wunderjahren" ], "fr": [ "les années miracles", "les années miraculeuses" ] },
 		{ "de": [ "mehr Geld verdienen" ], "fr": [ "gagner plus d'argent" ] },
 		{ "de": [ "wollen", "möchten" ], "fr": [ "vouloir" ] },
-		{ "de": [ "denn" ], "fr": [ "car", "parce que" ] },
 		{ "de": [ "die Flüchtlinge" ], "fr": [ "les réfugiés" ] },
 		{ "de": [ "die Asylbewerber" ], "fr": [ "les demandeurs d'asile" ] },
 		{ "de": [ "fliehen" ], "fr": [ "fuir" ] },
@@ -111,6 +113,7 @@
 		{ "de": [ "Grenze" ], "fr": [ "frontière" ] },
 		{ "de": [ "eine Willkommenspolitik führen" ], "fr": [ "mettre en place une politique de bienvenue", "avoir une politique de bienvenue", "mener une politique de bienvenue" ] },
 		{ "de": [ "die Verälterung der Bevölkerung" ], "fr": [ "le vieillissement de la population" ] },
+		// Das freiwillige soziale Jahr
 		{ "de": [ "Freiwillige" ], "fr": [ "bénévole" ] },
 		{ "de": [ "Einrichtungen" ], "fr": [ "établissement", "institution", "organisme" ] },
 		{ "de": [ "Krankenhaus" ], "fr": [ "hôpital" ] },
@@ -119,21 +122,27 @@
 		{ "de": [ "Freizeitheime" ], "fr": [ "centre de loisirs" ] },
 		{ "de": [ "Fähigkeiten" ], "fr": [ "capacités" ] },
 		{ "de": [ "Taschengeld" ], "fr": [ "argent de poche" ] },
+		// Die Deutsch-Französiche Hochschule
 		{ "de": [ "Studiengängen" ], "fr": [ "programme d'études", "programme d'étude" ] },
 		{ "de": [ "Doppelstudium" ], "fr": [ "diplôme binational" ] },
 		{ "de": [ "Kulturelle Unterschiede" ], "fr": [ "différence culturelle" ] },
+		// das Gap-Jahr
 		{ "de": [ "ein Praktikum" ], "fr": [ "un stage" ] },
+		// Erasmus
 		{ "de": [ "ein Austauschprogramme" ], "fr": [ "un programme d'échange" ] },
+		// Pro-Tandem
 		{ "de": [ "die Bildung" ], "fr": [ "la formation" ] },
 		{ "de": [ "Firma" ], "fr": [ "entreprise" ] },
 		{ "de": [ "erwachsen" ], "fr": [ "adulte" ] },
 		{ "de": [ "Teilnehmer" ], "fr": [ "participant" ] },
+		// Couchsurfing
 		{ "de": [ "die meisten" ], "fr": [ "la majorité" ] },
 		{ "de": [ "meistens" ], "fr": [ "la plupart du temps" ] },
 		{ "de": [ "kostenlos" ], "fr": [ "gratuit" ] },
 		{ "de": [ "Bild des Ortes" ], "fr": [ "une vision authentique du lieu" ] },
 		{ "de": [ "Einblick" ], "fr": [ "coup d'oeil", "coup d'œil" ] },
 		{ "de": [ "Stadtführung" ], "fr": [ "tour de la ville", "visite guidée de la ville" ] },
+		// Deutschland braucht Zuwanderung
 		{ "de": [ "Osteuropa" ], "fr": [ "Europe de l'Est", "Europe orientale" ] },
 		{ "de": [ "der Handel" ], "fr": [ "le commerce" ] },
 		{ "de": [ "das Gastgewerbe" ], "fr": [ "la restauration" ] },

@@ -1,12 +1,14 @@
-const parameters = new URLSearchParams(window.location.search);
 
-var filename = parameters.get('f');
+const parameters = new URLSearchParams(window.location.search);
+var parameter = parameters.get('p');
 
 // The filename parameter is present in the query string.
-if (filename != null) {
+if (typeof parameter !== 'undefined') {
+	var paths = parameter.split(',');
+	
 	// Create a new quiz object.
-	var quiz = new Quiz(`lists/${filename}`);
-	quiz.next();
+	var quiz = new Quiz(paths);
+	quiz.loadQuestion();
 
 	// Get keyboard input.
 	window.addEventListener("keydown", function (event) {
@@ -17,7 +19,7 @@ if (filename != null) {
 		
 		switch (event.key) {
 		case "Enter":
-			quiz.onButtonClick();
+			quiz.onClick();
 			break;
 		default:
 			// Quit when this doesn't handle the key event.

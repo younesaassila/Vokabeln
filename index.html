@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Global Site Tag ‒ Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149451988-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'UA-149451988-2', { 'anonymize_ip': true });
+		</script>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -25,13 +33,17 @@
 			<p>Vokabeln! est un site web sur lequel tu peux réviser tout le vocabulaire vu pendant l'année en cours d'allemand.</p>
 			<br>
 			<p class="header">Thèmes disponibles</p>
-			<p>Choisis un thème pour commencer à t'exercer.</p>
-			<div>
-				<button onclick="play('raum_austausch.json')">Raum und Austausch</button>
+			<p>Choisis un thème ci-dessous pour commencer à t'exercer.</p>
+			<div class="themes-container">
+				<p class="themes-header">🌍 Raum und Austausch</p>
+				<button onclick="play('raum_austausch')">Leçon &amp; Documents</button><br>
+				<button onclick="play('raum_austausch:nodocs')">Leçon</button><br>
+				<button onclick="play('raum_austausch:docs')">Documents</button><br>
+				<p class="themes-header">🔗 Mots de liaison et conjonctions</p>
+				<button onclick="play('linking_words_conjunctions')">Mots de liaison et conjonctions</button>
 			</div>
-			<p class="info">D'autres thèmes seront ajoutés au cours de l'année.</p>
 		</div>
 		<!-- Scripts -->
-		<script src="js/main.js"></script>
+		<script src="js/index.js"></script>
 	</body>
 </html>

@@ -1,0 +1,13 @@
+{
+    "words": [
+		{ "de": [ "die Bildung", "die Ausbildung" ], "fr": [ "la formation" ] },
+		{ "de": [ "eine berufliche Ausbildung" ], "fr": [ "une formation professionnelle" ] },
+		{ "de": [ "Firma" ], "fr": [ "entreprise" ] },
+		{ "de": [ "die Erwachsene" ], "fr": [ "adultes" ] },
+		{ "de": [ "die Teilnehmer" ], "fr": [ "participants" ] },
+		{ "de": [ "der Auszubildende" ], "fr": [ "le stagiaire" ] },
+		{ "de": [ "In einem Betrieb" ], "fr": [ "dans une entreprise" ] },
+		{ "de": [ "ein Praktikum" ], "fr": [ "un stage" ] },
+		{ "de": [ "den Alltag" ], "fr": [ "la vie de tous les jours", "le quotidien" ] }
+    ]
+}
