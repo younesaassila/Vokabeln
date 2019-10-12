@@ -4,7 +4,7 @@ a {
 	cursor: pointer;
 	text-decoration: none;
 
-	transition: 0.2s;
+	transition: color 0.2s;
 }
 
 a:hover {
@@ -12,7 +12,7 @@ a:hover {
 	cursor: pointer;
 	text-decoration: none;
 
-	transition: 0.2s;
+	transition: color 0.2s;
 }
 
 a:visited {
@@ -20,7 +20,7 @@ a:visited {
 	cursor: pointer;
 	text-decoration: none;
 
-	transition: 0.2s;
+	transition: color 0.2s;
 }
 
 a:visited:hover {
@@ -28,5 +28,5 @@ a:visited:hover {
 	cursor: pointer;
 	text-decoration: none;
 
-	transition: 0.2s;
+	transition: color 0.2s;
 }

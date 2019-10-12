@@ -1,17 +1,22 @@
 class Quiz {
-	constructor(lists) {
-		this.questions = this.getQuestions(lists);
-		this.playerAnswered = false;
+	constructor(paths) {
+		this.questions = this.getQuestionsFromLists(paths);
 		this.index = 0;
+
+		// Used to determine which action the button should do when pressed.
+		// If set to false: The answer the player has entered will be verified.
+		// If set to true: The game will load a new question.
+		this.playerAnswered = false;
 		
-		this.header = document.getElementById("header-vocabulary");
-		this.textInput = document.getElementById("textbox-answer");
-		this.buttonInput = document.getElementById("button-answer");
+		this.headerInstruction = document.getElementById("header-instruction");
+		this.headerWord = document.getElementById("header-word");
+		this.textInput = document.getElementById("text-input");
+		this.buttonInput = document.getElementById("button-input");
 	}
 
 	/**
-	 * Return the words array from a list object.
-	 * @param {string} path Path of the list.
+	 * Return the words array of a list.
+	 * @param {string} path Path of the desired list.
 	 */
 	getWordsFromList(path) {
 		if (typeof path === 'string') {
@@ -26,86 +31,103 @@ class Quiz {
 	}
 
 	/**
-	 * Return an array of questions made from each of the words array in the given lists.
-	 * @param {*} lists 
+	 * Return an array of questions.
+	 * @param {*} paths Array of paths each leading to a list.
 	 */
-	getQuestions(lists) {
+	getQuestionsFromLists(paths) {
 		var questions = [];
-
-		lists.forEach(list => {
-			var listWords = this.getWordsFromList(list);
-			if (typeof listWords !== 'undefined') {
-				listWords.forEach(word => {
+		paths.forEach(path => {
+			var words = this.getWordsFromList(path);
+			if (typeof words !== 'undefined') {
+				words.forEach(word => {
 					var question = new Question(word.de, word.fr);
 					questions.push(question);
 				});
 			}
 		});
-
 		return questions;
 	}
 
 	/**
-	 * Load a random question from the questions array and update the user interface.
-	 * @param {number} index The index of the chosen question in the questions array.
-	 * If empty, this value is random.
+	 * Load a question from the questions array.
+	 * @param {number} index Index of the desired question.
+	 * If left empty, it will be set to a random number.
 	 */
 	loadQuestion(index = Math.floor(Math.random() * this.questions.length)) {
 		this.index = index;
+		// Randomly set the language of the question.
 		this.questions[this.index].setLanguage();
+		this.playerAnswered = false;
 
-		// Reset the user interface.
-		this.reset();
+		this.resetUserInterface();
 
-		// Select a random word from the words the question contains for the current language.
-		// This is the case as most words have equivalents.
-		var wordArray = this.questions[this.index].getWord();
-		var randomWordIndex = Math.floor(Math.random() * wordArray.length);
+		// Choose a random possibility from the question's word.
+		var possibilities = this.questions[this.index].getWord();
+		var randomIndex = Math.floor(Math.random() * possibilities.length);
 
 		// Update the user interface.
 		switch (this.questions[this.index].language) {
 			case 'de':
-				this.header.innerHTML = `${wordArray[randomWordIndex]} → Français`;
+				this.headerInstruction.innerHTML = 'Traduis en français :';
 				break;
 			case 'fr':
-				this.header.innerHTML = `${wordArray[randomWordIndex]} → Deutsch`;
+				this.headerInstruction.innerHTML = 'Traduis en allemand :';
 				break;
 		}
+		this.headerWord.innerHTML = `${possibilities[randomIndex]}`;
 	}
 
-	onButtonClick() {
+	/**
+	 * Triggered when the player presses the 'Verify' or 'Continue' buttons.
+	 * Verify the player's answer or load a new question depending on the 'playerAnswered' variable.
+	 */
+	onClick() {
 		switch (this.playerAnswered) {
+			// If the player has not already answered the question, verify their answer.
 			case false:
-				var args = this.questions[this.index].verifyAnswer(this.textInput.value);
 				this.playerAnswered = true;
 
+				var args = this.questions[this.index].verifyAnswer(this.textInput.value);
+				
+				// Update the user interface.
 				if (args.correct) {
-					var correctAnswer = this.questions[this.index].getCorrectAnswers()[answer.correctAnswersIndex];
-					this.header.style.color = '#239b46';
-					this.header.innerHTML = `Correct ! La bonne réponse est en effet : ${correctAnswer}`;
+					var correctAnswer = this.questions[this.index].getCorrectAnswers()[args.correctAnswersIndex];
+					
+					this.headerInstruction.style.color = '#239b46';
+					this.headerWord.style.color = '#239b46';
+
+					this.headerInstruction.innerHTML = `La bonne réponse est en effet : ${correctAnswer}`;
+					this.headerWord.innerHTML = 'Correct !';
 				} else {
 					var correctAnswer = this.questions[this.index].getCorrectAnswers()[0];
-					this.header.style.color = '#c83c3c';
-					this.header.innerHTML = `Incorrect, la bonne réponse est : ${correctAnswer}`;
-				}
+					this.headerInstruction.style.color = '#c83c3c';
+					this.headerWord.style.color = '#c83c3c';
 
+					this.headerInstruction.innerHTML = `La bonne réponse est : ${correctAnswer}`;
+					this.headerWord.innerHTML = 'Incorrect !';
+				}
 				this.textInput.disabled = true;
 				this.buttonInput.innerHTML = 'Continuer';
 				this.buttonInput.focus();
 				break;
+			// If the player already answered the question, load a new one.
 			case true:
 				this.loadQuestion();
 				break;
 		}
 	}
 
-	reset() {
-		this.playerAnswered = false;
+	/**
+	 * Reset the user interface upon a new question being loaded.
+	 */
+	resetUserInterface() {
+		this.headerInstruction.style.color = 'black';
+		this.headerWord.style.color = 'black';
 
-		this.header.style.color = 'black';
 		this.textInput.disabled = false;
 		this.textInput.value = '';
 		this.textInput.focus();
+
 		this.buttonInput.innerHTML = 'Vérifier';
 	}
 }

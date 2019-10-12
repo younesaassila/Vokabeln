@@ -12,9 +12,19 @@ p {
 }
 
 .page-container {
-	width: 80%;
-	margin: 30px auto 0px auto;
-	padding-bottom: 30px;
+	width: 75%;
+	margin: 30px auto 36px auto;
+}
+
+.page-container .themes-container {
+	padding-bottom: 36px;
+}
+
+.page-container .themes-container .themes-header {
+	font-size: 18pt;
+
+	margin-top: 24px;
+	margin-bottom: 12px;
 }
 
 .title {

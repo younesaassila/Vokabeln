@@ -1,8 +1,8 @@
 class Question {
-	constructor(wordGerman, wordFrench) {
+	constructor(germanWord, frenchWord) {
 		this.word = {
-			'de': wordGerman,
-			'fr': wordFrench
+			'de': germanWord,
+			'fr': frenchWord
 		}
 		
 		this.language = 'de';
@@ -30,10 +30,16 @@ class Question {
 		}
 	}
 
+	/**
+	 * Return the question's word for the current language.
+	 */
 	getWord() {
 		return this.word[this.language];
 	}
 
+	/**
+	 * Return the question's answer depending on the current language.
+	 */
 	getCorrectAnswers() {
 		switch (this.language) {
 			case 'de':
@@ -43,6 +49,10 @@ class Question {
 		}
 	}
 
+	/**
+	 * Verify the given answer and return arguments specifying the details.
+	 * @param {string} answer The player's answer.
+	 */
 	verifyAnswer(answer) {
 		var args = new VerifiedAnswerArgs();
 

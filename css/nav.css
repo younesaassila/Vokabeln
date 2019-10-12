@@ -88,7 +88,7 @@ html, body {
 	display: none;
 
 	margin: 0;
-	top: 12px;
+	top: 10px;
 }
 
 .navigation-bar .container .list .menu-button .icon {
@@ -96,7 +96,7 @@ html, body {
 }
 
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1000px) {
 	.navigation-bar .container .logo-description-container {
 		display: block;
 		float: none;
@@ -133,7 +133,7 @@ html, body {
 
 	.navigation-bar.responsive .container .list li {
 		display: block;
-		padding-bottom: 6px;
+		padding-bottom: 12px;
 		text-align: center;
 
 		margin-left: 0px;

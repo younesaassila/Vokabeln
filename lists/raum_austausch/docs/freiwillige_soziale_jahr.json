@@ -1,0 +1,14 @@
+{
+    "words": [
+		{ "de": [ "der Freiwillige" ], "fr": [ "le bénévole" ] },
+		{ "de": [ "sich freiwillig engagieren" ], "fr": [ "s’engager bénévolement" ] },
+		{ "de": [ "soziale Einrichtungen" ], "fr": [ "établissements sociaux" ] },
+		{ "de": [ "krankenhäuser" ], "fr": [ "hôpitaux" ] },
+		{ "de": [ "Altenheime" ], "fr": [ "maisons de retraite" ] },
+		{ "de": [ "Behinderteneinrichtungen" ], "fr": [ "établissements pour les handicapés" ] },
+		{ "de": [ "Sozialstationen", "Verein" ], "fr": [ "association" ] },
+		{ "de": [ "Freizeitheime" ], "fr": [ "centre de loisirs" ] },
+		{ "de": [ "die Fähigkeiten" ], "fr": [ "les capacités" ] },
+		{ "de": [ "Taschengeld" ], "fr": [ "argent de poche" ] }
+    ]
+}
