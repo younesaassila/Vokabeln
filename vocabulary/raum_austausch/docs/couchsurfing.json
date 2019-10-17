@@ -3,13 +3,15 @@
     "words": [
 		{ "de": [ "die meisten" ], "fr": [ "la majorité" ] },
 		{ "de": [ "meistens" ], "fr": [ "la plupart du temps" ] },
+		{ "de": [ "besonders" ], "fr": [ "particulièrement" ] },
+		{ "de": [ "bleiben" ], "fr": [ "rester" ] },
 		{ "de": [ "kostenlos" ], "fr": [ "gratuit" ] },
-		{ "de": [ "Bild des Ortes" ], "fr": [ "une vision authentique du lieu", "un regard authentique du lieu" ] },
-		{ "de": [ "Einblick" ], "fr": [ "coup d'oeil", "coup d'œil" ] },
+		{ "de": [ "Bild des Ortes" ], "fr": [ "une vision authentique du lieu" ] },
+		{ "de": [ "Einblick" ], "fr": [ "coup d'œil", "coup d'oeil" ] },
 		{ "de": [ "Stadtführung" ], "fr": [ "tour de la ville", "visite de la ville" ] },
 		{ "de": [ "alle Leute" ], "fr": [ "tout le monde" ] },
 		{ "de": [ "Landwirte" ], "fr": [ "agriculteurs" ] },
-		{ "de": [ "der Gastgeber" ], "fr": [ "la personne qui accueille", "l’hôte" ] },
+		{ "de": [ "der Gastgeber" ], "fr": [ "l’hôte", "la personne qui accueille" ] },
 		{ "de": [ "einen Einblick in die Kultur haben" ], "fr": [ "avoir une vue d’ensemble sur la culture" ] },
 		{ "de": [ "sparen" ], "fr": [ "économiser" ] },
 		{ "de": [ "der Sofa" ], "fr": [ "le canapé" ] }
