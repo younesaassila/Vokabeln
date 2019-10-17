@@ -1,12 +1,11 @@
 
 const parameters = new URLSearchParams(window.location.search);
-var parameter = parameters.get('p');
+var id = parameters.get('id');
 
-// The filename parameter is present in the query string.
-if (typeof parameter !== 'undefined') {
-	var paths = parameter.split(',');
+if (typeof id !== 'undefined') {
+	var dataAccess = new DataAccess();
+	var paths = dataAccess.getPaths(id);
 	
-	// Create a new quiz object.
 	var quiz = new Quiz(paths);
 	quiz.loadQuestion();
 
@@ -30,5 +29,5 @@ if (typeof parameter !== 'undefined') {
 		event.preventDefault();
 	}, true);
 } else {
-	location.href = `index.html`;
+	location.href = 'index.html';
 }

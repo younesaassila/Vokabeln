@@ -9,6 +9,8 @@
 			gtag('js', new Date());
 			gtag('config', 'UA-149451988-2', { 'anonymize_ip': true });
 		</script>
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/39ed21dbfe.js" crossorigin="anonymous"></script>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -21,7 +23,7 @@
 		<!-- Navigation Bar -->
 		<div id="nav-placeholder"></div>
 		<!-- Load Navigation Bar -->
-		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/libs/jquery-3.4.1.min.js"></script>
 		<script>
 			$(function(){
 				$("#nav-placeholder").load("nav.html");
@@ -36,12 +38,39 @@
 			<p>Choisis un thème ci-dessous pour commencer à t'exercer.</p>
 			<div class="themes-container">
 				<p class="themes-header">🌍 Raum und Austausch</p>
-				<button onclick="play('raum_austausch')">Leçon &amp; Documents</button><br>
-				<button onclick="play('raum_austausch:nodocs')">Leçon</button><br>
-				<button onclick="play('raum_austausch:docs')">Documents</button><br>
+				<button onclick="list('raum_austausch:*')">
+					<i class="fas fa-list-ul fa-sm"></i> Liste
+				</button>
+				<button class="button-play" onclick="play('raum_austausch:*')">
+					<i class="fas fa-play fa-sm"></i> S'entraîner
+				</button>
+				<p class="themes-header">🌍📚 Raum und Austausch ‒ Leçon seulement</p>
+				<button onclick="list('raum_austausch')">
+					<i class="fas fa-list-ul fa-sm"></i> Liste
+				</button>
+				<button class="button-play" onclick="play('raum_austausch')">
+					<i class="fas fa-play fa-sm"></i> S'entraîner
+				</button>
+				<p class="themes-header">🌍📄 Raum und Austausch ‒ Documents seulement</p>
+				<button onclick="list('raum_austausch:docs')">
+					<i class="fas fa-list-ul fa-sm"></i> Liste
+				</button>
+				<button class="button-play" onclick="play('raum_austausch:docs')">
+					<i class="fas fa-play fa-sm"></i> S'entraîner
+				</button>
 				<p class="themes-header">🔗 Mots de liaison et conjonctions</p>
-				<button onclick="play('linking_words_conjunctions')">Mots de liaison et conjonctions</button>
+				<button onclick="list('linking_words_conjunctions')">
+					<i class="fas fa-list-ul fa-sm"></i> Liste
+				</button>
+				<button class="button-play" onclick="play('linking_words_conjunctions')">
+					<i class="fas fa-play fa-sm"></i> S'entraîner
+				</button>
 			</div>
+			<br>
+			<p class="header">Mise à jour du 17 octobre</p>
+			<p>
+				• Il est désormais possible de consulter la liste des mots de vocabulaire pour chacun des thèmes.
+			</p>
 		</div>
 		<!-- Scripts -->
 		<script src="js/index.js"></script>

@@ -15,32 +15,23 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap"> 
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/a_style.css" />
-		<link rel="stylesheet" type="text/css" href="css/quiz.css" />
+		<link rel="stylesheet" type="text/css" href="css/list.css" />
 		<title>Vokabeln!</title>
 	</head>
 	<body>
 		<!-- Navigation Bar -->
 		<div id="nav-placeholder"></div>
 		<!-- Load Navigation Bar -->
-		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/libs/jquery-3.4.1.min.js"></script>
 		<script>
 			$(function(){
 				$("#nav-placeholder").load("nav.html");
 			});
 		</script>
 		<!-- Webpage Content -->
-		<div class="page-container">
-			<p id="header-instruction"></p>
-			<p class="header" id="header-word"></p>
-			<input id="text-input" type="text" placeholder="Entrez votre réponse" disabled><br>
-			<p id="feedback-link"><a href="feedback.html">Un problème avec cette traduction ? Clique-ici !</a></p>
-			<button id="button-input" onclick="quiz.onClick()">Vérifier</button>
-			<p class="info">Tu peux également appuyer sur la touche "Entrée" de ton clavier.</p>
-		</div>
+		<div class="page-container" id="container"></div>
 		<!-- Scripts -->
-		<script src="js/verified_answer_args.js"></script>
-		<script src="js/question.js"></script>
-		<script src="js/quiz.js"></script>
-		<script src="js/game.js"></script>
+		<script src="js/data_access.js"></script>
+		<script src="js/list.js"></script>
 	</body>
 </html>
