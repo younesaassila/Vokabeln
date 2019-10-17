@@ -59,8 +59,10 @@ class Question {
 		if (typeof answer === 'string') {
 			// Normalize the answer in order not to take into account any accents.
 			answer = answer.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-			answer = answer.replace('ß', 'ss');
-			answer = answer.replace("'", " ");
+			answer = answer.replace(/ß/g, 'ss');
+			answer = answer.replace(/œ/g, 'oe');
+			answer = answer.replace(/'/g, ' ');
+			answer = answer.replace(/’/g, ' ');
 
 			// Format the string variable to make it all lowercase letters.
 			answer = answer.toLowerCase();
@@ -78,16 +80,16 @@ class Question {
 			// Foreach correct answer.
 			for (var i = 0; i < correctAnswers.length; i++) {
 				var correctAnswer = correctAnswers[i];
-
 				correctAnswer = correctAnswer.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-				correctAnswer = correctAnswer.replace('ß', 'ss');
-				correctAnswer = correctAnswer.replace("'", " ");
+				correctAnswer = correctAnswer.replace(/ß/g, 'ss');
+				correctAnswer = correctAnswer.replace(/œ/g, 'oe');
+				correctAnswer = correctAnswer.replace(/'/g, ' ');
+				correctAnswer = correctAnswer.replace(/’/g, ' ');
 				correctAnswer = correctAnswer.toLowerCase();
-
 				correctAnswers[i] = correctAnswer;
 
 				// If the answer is a perfect match, return true.
-				if (answer == correctAnswer) {
+				if (answer === correctAnswer) {
 					// The answer is correct.
 					args.correct = true;
 					args.correctAnswersIndex = i;
