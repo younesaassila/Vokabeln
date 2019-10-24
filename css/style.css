@@ -1,40 +1,94 @@
 
 html, body {
-	font-family: 'Be Vietnam', sans-serif;
-	
 	background-color: rgb(250, 250, 250);
+	font-family: 'Be Vietnam', sans-serif;
+	margin: 0;
 	text-align: center;
 }
 
-p {
-	font-size: 14pt;
+p, pre {
 	color: #282828;
+	font-family: 'Be Vietnam', sans-serif;
+	font-size: 14pt;
 }
 
-.page-container {
-	width: 75%;
-	margin: 30px auto 70px auto;
+/* Font Awesome icon */
+i {
+	margin-right: 5px;
 }
 
-.page-container .themes-container .themes-header {
-	font-size: 18pt;
-
-	margin-top: 32px;
-	margin-bottom: 10px;
+small {
+	color: gray;
+	display: block;
+	font-size: 11pt;
+	margin: 24px 0px 0px 0px;
 }
 
-.title {
-	font-size: 26pt;
-
-	margin-top: 14px;
-	margin-bottom: 0px;
+a {
+	color: #1e90ff;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.2s;
 }
 
-.header {
+a:hover {
+	color: #66b3ff;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+a:visited {
+	color: #1e90ff;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+a:visited:hover {
+	color: #66b3ff;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+main {
+	margin: 30px auto 66px auto;
+	width: 80%;
+}
+
+header {
+	margin: 0px 0px 48px 0px;
+}
+
+section {
+	margin: 0px 0px 48px 0px;
+}
+
+h1 {
+	font-size: 24pt;
+	font-weight: normal;
+	margin: 16px 0px 8px 0px;
+}
+
+h2 {
 	font-size: 20pt;
+	font-weight: normal;
+	margin: 16px 0px 8px 0px;
+}
 
-	margin-top: 28px;
-	margin-bottom: 14px;
+h3 {
+	font-size: 18pt;
+	font-weight: normal;
+	margin: 16px 0px 8px 0px;
+}
+
+img {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+	display: block;
+	margin: 8px auto 8px auto;
+	min-width: 300px;
+	width: 40%;
 }
 
 button {
@@ -44,7 +98,7 @@ button {
 	color: white;
 	font-family: inherit;
 	font-size: 15pt;
-	margin-top: 10px;
+	margin: 12px 0px 12px 0px;
 	padding: 10px 24px;
 	transition: 0.2s;
 }
@@ -56,21 +110,20 @@ button:hover {
 	transition: 0.2s;
 }
 
-.button-play {
-	background-color: #3cb371;
-	border: 2px #267349;
-}
-
-.button-play:hover {
-	background-color: #40bf79;
-}
-
+/* Font Awesome icon contained in a button */
 button i {
 	margin-right: 10px;
 }
 
-.info {
-	color: gray;
-	font-size: 11pt;
-	margin-top: 25px;
+.theme-container {
+	margin: 24px 0px 24px 0px;
+}
+
+.theme-container .button-play {
+	background-color: #3cb371;
+	border: 2px #267349;
+}
+
+.theme-container .button-play:hover {
+	background-color: #40bf79;
 }

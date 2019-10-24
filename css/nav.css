@@ -3,6 +3,33 @@ html, body {
 	margin: 0;
 }
 
+a {
+	color: #1e90ff;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+a:hover {
+	color: #66b3ff;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+a:visited {
+	color: #1e90ff;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+a:visited:hover {
+	color: #66b3ff;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.2s;
+}
 
 .navigation-bar {
 	position: relative;
@@ -39,12 +66,16 @@ html, body {
 
 
 .navigation-bar .container .logo-description-container .logo {
+	border: 0;
+	box-shadow: none;
+	cursor: pointer;
 	display: inline-block;
+	height: 42px;
+	margin: 0;
+	min-width: unset;
 	position: relative;
 	top: 3px;
-
-	height: 42px;
-	cursor: pointer;
+	width: unset;
 }
 
 .navigation-bar .container .logo-description-container .description {
@@ -96,7 +127,7 @@ html, body {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
 	.navigation-bar .container .logo-description-container {
 		display: block;
 		float: none;

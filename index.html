@@ -1,78 +1,60 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<!-- Global Site Tag ‒ Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149451988-2"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
-			gtag('config', 'UA-149451988-2', { 'anonymize_ip': true });
-		</script>
-		<!-- Font Awesome -->
-		<script src="https://kit.fontawesome.com/39ed21dbfe.js" crossorigin="anonymous"></script>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap"> 
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/a_style.css" />
-		<title>Vokabeln!</title>
-	</head>
-	<body>
-		<!-- Navigation Bar -->
-		<div id="nav-placeholder"></div>
-		<!-- Load Navigation Bar -->
-		<script src="js/libs/jquery-3.4.1.min.js"></script>
-		<script>
-			$(function(){
-				$("#nav-placeholder").load("nav.html");
-			});
-		</script>
-		<!-- Webpage Content -->
-		<div class="page-container">
-			<p class="title">Bienvenue sur Vokabeln!</p>
-			<p>Vokabeln! est un site web sur lequel tu peux réviser tout le vocabulaire vu pendant l'année en cours d'allemand.</p>
-			<br>
-			<p class="header">Thèmes disponibles</p>
-			<p>Choisis un thème ci-dessous pour commencer à t'exercer.</p>
-			<div class="themes-container">
-				<p class="themes-header">🌍 Raum und Austausch</p>
-				<button onclick="list('raum_austausch:*')">
-					<i class="fas fa-list-ul fa-sm"></i> Liste
-				</button>
-				<button class="button-play" onclick="play('raum_austausch:*')">
-					<i class="fas fa-play fa-sm"></i> S'entraîner
-				</button>
-				<p class="themes-header">🌍📚 Raum und Austausch ‒ Leçon seulement</p>
-				<button onclick="list('raum_austausch')">
-					<i class="fas fa-list-ul fa-sm"></i> Liste
-				</button>
-				<button class="button-play" onclick="play('raum_austausch')">
-					<i class="fas fa-play fa-sm"></i> S'entraîner
-				</button>
-				<p class="themes-header">🌍📄 Raum und Austausch ‒ Documents seulement</p>
-				<button onclick="list('raum_austausch:docs')">
-					<i class="fas fa-list-ul fa-sm"></i> Liste
-				</button>
-				<button class="button-play" onclick="play('raum_austausch:docs')">
-					<i class="fas fa-play fa-sm"></i> S'entraîner
-				</button>
-				<p class="themes-header">🔗 Mots de liaison et conjonctions</p>
-				<button onclick="list('linking_words_conjunctions')">
-					<i class="fas fa-list-ul fa-sm"></i> Liste
-				</button>
-				<button class="button-play" onclick="play('linking_words_conjunctions')">
-					<i class="fas fa-play fa-sm"></i> S'entraîner
-				</button>
-			</div>
-			<br>
-			<p class="header">Mise à jour du 17 octobre</p>
-			<p>
-				• Il est désormais possible de consulter la liste des mots de vocabulaire pour chacun des thèmes.
-			</p>
-		</div>
-		<!-- Scripts -->
-		<script src="js/index.js"></script>
-	</body>
+<html lang="fr">
+  <head>
+    <!-- Global Site Tag ‒ Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149451988-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-149451988-2', { 'anonymize_ip': true });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vokabeln!</title>
+  </head>
+  <body>
+    <nav id="nav"></nav>
+    <main>
+      <header>
+        <h1>Bienvenue sur Vokabeln!</h1>
+        <p>
+          Vokabeln! est un site web sur lequel tu peux réviser tout le
+          vocabulaire vu pendant l'année en cours d'allemand.
+        </p>
+      </header>
+      <section>
+        <h2>Thèmes disponibles</h2>
+        <p>Choisis un thème ci-dessous pour commencer à t'exercer.</p>
+        <div class="theme-container">
+          <h3>🌍 Raum und Austausch</h3>
+          <button class="button-list" onclick="list('raum_austausch:*')"></button>
+          <button class="button-play" onclick="play('raum_austausch:*')"></button>
+        </div>
+        <div class="theme-container">
+          <h3>🌍📚 Raum und Austausch ‒ Leçon seulement</h3>
+          <button class="button-list" onclick="list('raum_austausch')"></button>
+          <button class="button-play" onclick="play('raum_austausch')"></button>
+        </div>
+        <div class="theme-container">
+          <h3>🌍📄 Raum und Austausch ‒ Documents seulement</h3>
+          <button class="button-list" onclick="list('raum_austausch:docs')"></button>
+          <button class="button-play" onclick="play('raum_austausch:docs')"></button>
+        </div>
+        <div class="theme-container">
+          <h3>🔗 Mots de liaison et conjonctions</h3>
+          <button class="button-list" onclick="list('linking_words_conjunctions')"></button>
+          <button class="button-play" onclick="play('linking_words_conjunctions')"></button>
+        </div>
+      </section>
+    </main>
+    <!-- Load navigation bar -->
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script>$(function(){$("#nav").load("nav.html");});</script>
+    <!-- Other scripts -->
+    <script src="js/index.js"></script>
+  </body>
 </html>

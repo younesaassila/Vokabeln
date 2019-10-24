@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="css/nav.css" />
-		<link rel="stylesheet" type="text/css" href="css/a_style.css" />
-	</head>
-	<body>
-		<div class="navigation-bar" id="nav-bar">
-			<div class="container">
-				<div class="logo-description-container">
-					<img class="logo" src="images/logo.png" ondragstart="return false;" onclick="location.href = 'index.html';" />
-					<p class="description">| Réalisé par <a href="https://github.com/Yougi3/">&#64;Yougi3</a></p>
-				</div>
-				<ul class="list">
-					<li class="menu-button">
-						<a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-							<i class="fa fa-bars"></i>
-						</a>
-					</li>
-					<li><a class="link" href="index.html">Accueil</a></li>
-					<li><a class="link" href="feedback.html">Signaler une erreur</a></li>
-					<li><a class="link" href="about.html">À propos</a></li>
-				</ul>
-			</div>
-		</div>
-		<script src="js/nav.js"></script>
-	</body>
+<html lang="fr">
+  <head>
+    <!-- Load Font Awesome icons -->
+    <!-- Removing this line will impact icon loading on all pages -->
+    <script src="https://kit.fontawesome.com/39ed21dbfe.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/nav.css">
+  </head>
+  <body>
+    <div class="navigation-bar" id="nav-bar">
+      <div class="container">
+        <div class="logo-description-container">
+          <img class="logo" src="images/logo.png" ondragstart="return false;" onclick="location.href = 'index.html';" />
+        </div>
+        <ul class="list">
+          <li class="menu-button">
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li><a class="link" href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+          <li><a class="link" href="feedback.html"><i class="fas fa-exclamation-circle"></i> Signaler une erreur</a></li>
+          <li><a class="link" href="about.html"><i class="fas fa-address-card"></i> À propos</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/nav.js"></script>
+  </body>
 </html>

@@ -1,50 +1,75 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<!-- Global Site Tag ‒ Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149451988-2"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
-			gtag('config', 'UA-149451988-2', { 'anonymize_ip': true });
-		</script>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap"> 
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/a_style.css" />
-		<title>Vokabeln! ‒ Signaler une erreur</title>
-	</head>
-	<body>
-		<!-- Navigation Bar -->
-		<div id="nav-placeholder"></div>
-		<!-- Load Navigation Bar -->
-		<script src="js/libs/jquery-3.4.1.min.js"></script>
-		<script>
-			$(function(){
-				$("#nav-placeholder").load("nav.html");
-			});
-		</script>
-		<!-- Webpage Content -->
-		<div class="page-container">
-			<p class="title">Signaler une erreur de traduction</p>
-			<p>
-				Il est possible que tu es rencontré une erreur dans la traduction d'un mot.<br>
-				Pour que je puisse corriger l'erreur et offrir une meilleure expérience de révision à tout le monde, suis les étapes ci-dessous.
-			</p>
-			<div style="text-align: left;">
-				<p class="header">1. Crées un compte GitHub</p>
-				<p>Rends-toi à cette addresse : <a href="https://github.com">https://github.com</a> et crées un compte GitHub (c'est gratuit et sans danger).</p>
-				<p class="header">2. Accèdes à <a href="https://github.com/Yougi3/Vokabeln/">la page GitHub du projet</a></p>
-				<p class="header">3. Clique sur 'Issues' puis 'New Issue'</p>
-				<p class="header">4. Décris le problème</p>
-				<p>Dans la description, précise de quel mot il s'agit avec son orthographe actuel et l'orthographe corrigé.</p>
-				<p class="header">5. Clique sur 'Submit new issue'</p>
-				<p>Et c'est terminé !</p>
-			</div>
-			<p class="info">PS : Je prévois de simplifier le processus dans le futur.</p>
-		</div>
-	</body>
+<html lang="fr">
+  <head>
+    <!-- Global Site Tag ‒ Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149451988-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-149451988-2', { 'anonymize_ip': true });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap"> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vokabeln! ‒ Signaler une erreur</title>
+  </head>
+  <body>
+    <nav id="nav"></nav>
+    <main>
+      <header>
+        <h1>Signaler une erreur de traduction</h1>
+        <p>
+          Il est possible que tu es rencontré une erreur dans la traduction d'un mot.<br>
+          Pour que je puisse corriger l'erreur et offrir une meilleure expérience de révision
+          à tout le monde, suis les étapes ci-dessous.
+        </p>
+        <small>PS : Je prévois de simplifier le processus dans le futur.</small>
+      </header>
+      <section style="text-align: left;">
+        <h2>1. Crées un compte GitHub</h2>
+        <p>
+          GitHub est une plateforme que les développeurs utilisent
+          pour partager leur code. Ne t'inquiètes pas, c'est sans danger !<br>
+          Crées un compte en te rendant
+          <a href="https://github.com/">sur la page d'accueil de GitHub</a>.<br>
+          Renseigne un nom d'utilisateur, une adresse mail et un mot de passe.
+        </p>
+        <img src="images/feedback/github-sign-up.jpg" alt="Page d'accueil de GitHub" />
+        <br>
+        <h2>2. Accèdes à la page GitHub du projet</h2>
+        <p>
+          Rends-toi à l'adresse suivante :
+          <a href="https://github.com/Yougi3/Vokabeln/">https://github.com/Yougi3/Vokabeln/</a>.
+          C'est l'adresse de la page GitHub du projet. Tu peux alors voir le code qui fait fonctionner
+          le site sur lequel tu te trouves actuellement. (C'est trop cool n'est-ce pas ?)
+        </p>
+        <img src="images/feedback/github-vokabeln.jpg" alt="Page du projet sur GitHub" />
+        <br>
+        <h2>3. Cliques sur 'Issues' puis 'New issue'</h2>
+        <p>
+          Une issue c'est un rapport d'erreur ou une suggestion. C'est grâce à ces rapports
+          que les développeurs sont avertis de la présence d'un problème dans leur code.
+        </p>
+        <img src="images/feedback/github-new-issue.jpg" alt="Création d'une issue" />
+        <br>
+        <h2>4. Décris le problème</h2>
+        <p>
+          Dans la description, précise de quel mot il s'agit avec son orthographe actuel
+          et l'orthographe corrigé.
+        </p>
+        <br>
+        <h2>5. Cliques sur 'Submit new issue'</h2>
+        <p>
+          Et voilà ! Tout est terminé. Je pourrais ainsi investiguer le problème
+          et le corriger au plus vite.
+        </p>
+      </section>
+    </main>
+    <!-- Load navigation bar -->
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script>$(function(){$("#nav").load("nav.html");});</script>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 class Quiz {
-	constructor(paths) {
+	constructor(paths, headerInstruction, headerWord, textInput, buttonInput) {
 		this.questions = this.getQuestionsFromLists(paths);
 		this.index = 0;
 
@@ -8,10 +8,10 @@ class Quiz {
 		// If set to true: The game will load a new question.
 		this.playerAnswered = false;
 		
-		this.headerInstruction = document.getElementById("header-instruction");
-		this.headerWord = document.getElementById("header-word");
-		this.textInput = document.getElementById("text-input");
-		this.buttonInput = document.getElementById("button-input");
+		this.headerInstruction = headerInstruction;
+		this.headerWord = headerWord;
+		this.textInput = textInput;
+		this.buttonInput = buttonInput;
 	}
 
 	/**
@@ -74,6 +74,7 @@ class Quiz {
 				this.headerInstruction.innerHTML = 'Traduis en allemand :';
 				break;
 		}
+		this.headerWord.lang = this.questions[this.index].language;
 		this.headerWord.innerHTML = `${possibilities[randomIndex]}`;
 	}
 
