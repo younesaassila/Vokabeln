@@ -1,0 +1,293 @@
+
+/* === COMMON STYLE === */
+
+:root {
+	/* TODO: Support dark mode! */
+	--navbar-background-color: white;
+	--navbar-height: 80px;
+	--background-color: rgb(250, 250, 250);
+	--color: black;
+	--link-color: #1e90ff;
+	--link-hover-color: #66b3ff;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--color);
+	font-family: 'Be Vietnam', sans-serif;
+	font-weight: normal;
+	margin: var(--navbar-height) 0 0 0;
+	padding: 12px;
+	text-align: center;
+}
+
+p,
+pre {
+	font-size: 14pt;
+}
+
+a,
+a:visited {
+	color: var(--link-color);
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+a:hover,
+a:visited:hover {
+	color: var(--link-hover-color);
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+
+/* === NAVIGATION BAR STYLE === */
+
+.navigation-bar {
+	align-items: center;
+	background-color: var(--navbar-background-color);
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-wrap: wrap;
+	opacity: 98%;
+	overflow: hidden;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: var(--navbar-height);
+}
+
+.navigation-bar * {
+	display: inline;
+}
+
+.navigation-bar img {
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+	height: 36px;
+	margin: 0 0 0 30px;
+	width: unset;
+}
+
+.navigation-bar nav {
+	margin: 0 30px 0 auto;
+}
+
+.navigation-bar ul {
+	margin: 0;
+	padding: 0;
+}
+
+.navigation-bar li {
+	margin: 0 12px;
+}
+
+.navigation-bar li a {
+	font-size: 15pt;
+}
+
+.navigation-bar .li-menu {
+	display: none;
+	margin: 0;
+}
+
+.navigation-bar .li-menu a {
+	font-size: 16pt;
+}
+
+@media screen and (max-width: 800px) {
+	.navigation-bar {
+		flex-direction: column;
+		justify-items: center;
+	}
+
+	.navigation-bar img { margin: 8px 0 0 0; }
+
+	.navigation-bar nav {
+		margin: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.navigation-bar li { display: none; }
+
+	.navigation-bar .li-menu { display: inline; }
+}
+
+@media screen and (max-width: 600px) {
+	.navigation-bar.responsive {
+		height: auto;
+		opacity: 100%;
+	}
+	
+	.navigation-bar.responsive li:not(.li-menu) {
+		display: block;
+		margin: 0 auto;
+		padding: 8px 0;
+	}
+}
+
+
+/* === MAIN STYLE === */
+
+main {
+	margin: 0 auto;
+	width: 80%;
+}
+
+main section {
+	margin: 0px 0px 48px 0px;
+}
+
+main small {
+	color: gray;
+	display: block;
+	font-size: 11pt;
+	margin: 24px 0px 0px 0px;
+}
+
+main small i {
+	margin-right: 5px;
+}
+
+main h1 {
+	font-size: 24pt;
+	font-weight: normal;
+	margin: 16px 0px 8px 0px;
+}
+
+main h2 {
+	font-size: 20pt;
+	font-weight: normal;
+	margin: 16px 0px 8px 0px;
+}
+
+main h3 {
+	font-size: 18pt;
+	font-weight: normal;
+	margin: 16px 0px 8px 0px;
+}
+
+main img {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+	display: block;
+	margin: 8px auto 8px auto;
+	min-width: 300px;
+	width: 40%;
+}
+
+main button {
+	background-color: #6495ED;
+	border: 2px #1b61e4;
+	border-radius: 6px;
+	color: white;
+	font-family: inherit;
+	font-size: 15pt;
+	margin: 12px 0px 12px 0px;
+	padding: 10px 24px;
+	transition: 0.2s;
+}
+
+main button:hover {
+	background-color: #76a0ef;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+main button:focus {
+	outline: none;
+}
+
+main button i {
+	margin-right: 10px;
+}
+
+/* Div used in index.html to display one theme's name and buttons */
+main .theme-container {
+	margin: 24px 0px 24px 0px;
+}
+
+main .theme-container .button-play {
+	background-color: #3cb371;
+	border: 2px #267349;
+}
+
+main .theme-container .button-play:hover {
+	background-color: #40bf79;
+}
+
+/* --- list.html style --- */
+
+main table {
+	table-layout: fixed;
+	max-width: 100%;
+	width: 100%;
+	word-wrap: break-word;
+}
+
+main table tr td {
+	font-size: 15pt;
+	overflow: hidden;
+	width: 50%;
+}
+
+main table tr .td-german {
+	padding: 10px 12px 10px 0px;
+	text-align: right;
+}
+
+main table tr .td-french {
+	color: gray;
+	padding: 10px 0px 10px 12px;
+	text-align: left;
+}
+
+/* --- play.html style --- */
+
+main input[type=text] {
+	background-color: var(--navbar-background-color);
+	border: 0px;
+	border-radius: 6px;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+	color: var(--color);
+	font-size: 17pt;
+	margin: 32px 0px 32px 0px;
+	padding: 12px;
+	text-align: center;
+}
+
+main input[type=text]:hover {
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.16);
+}
+
+main input[type=text]:focus {
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+	outline: none;
+}
+
+main input[type=text]::placeholder {
+	color: gray;
+	font-family: inherit;
+	font-size: 15pt;
+}
+
+#instruction {
+	font-size: 15pt;
+	margin-bottom: 6px;
+}
+
+#word {
+	margin: 6px 0px 0px 0px;
+}
+
+#text-input {
+	min-width: 200px;
+	width: 42%;
+}
