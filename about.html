@@ -13,15 +13,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap"> 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Vokabeln! ‒ À propos</title>
   </head>
   <body>
-    <nav id="nav"></nav>
+    <header id="navbar" class="navigation-bar"></header>
     <main>
-      <header>
+      <section>
         <h1>À propos de Vokabeln!</h1>
-      </header>
+      </section>
       <section>
         <h2>Un projet collaboratif</h2>
         <p>
@@ -57,7 +57,9 @@
       </section>
     </main>
     <!-- Load navigation bar -->
-    <script src="js/libs/jquery-3.4.1.min.js"></script>
-    <script>$(function(){$("#nav").load("nav.html");});</script>
+    <script src="/js/libs/jquery-3.4.1.min.js"></script>
+	<script>$(function(){$("#navbar").load("navbar.html");});</script>
+	<!-- Load Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/39ed21dbfe.js" crossorigin="anonymous"></script>
   </body>
 </html>
