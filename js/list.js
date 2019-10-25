@@ -52,8 +52,8 @@ if (typeof id !== 'undefined') {
 	
 		document.title += ` (${wordCount} mots)`;
 	} else {
-		location.href = '/index.html';
+		location.href = 'index.html';
 	}
 } else {
-	location.href = '/index.html';
+	location.href = 'index.html';
 }
