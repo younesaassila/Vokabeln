@@ -1,7 +1,7 @@
 
-var navigationBar = document.getElementById('navbar');
+const navigationBar = document.getElementById('navbar');
 
-function menu() {
+const menu = () => {
 	if (navigationBar.className === 'navigation-bar') {
 		navigationBar.className += ' responsive';
 	} else {

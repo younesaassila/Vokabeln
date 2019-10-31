@@ -1,6 +1,8 @@
 class Quiz {
 	constructor(paths, headerInstruction, headerWord, textInput, buttonInput) {
-		this.questions = this.getQuestionsFromLists(paths);
+		const dataAccess = new DataAccess();
+
+		this.questions = dataAccess.getQuestionsFromListPaths(paths);
 		this.index = 0;
 
 		// Used to determine which action the button should do when pressed.
@@ -12,40 +14,6 @@ class Quiz {
 		this.headerWord = headerWord;
 		this.textInput = textInput;
 		this.buttonInput = buttonInput;
-	}
-
-	/**
-	 * Return the words array of a list.
-	 * @param {string} path Path of the desired list.
-	 */
-	getWordsFromList(path) {
-		if (typeof path === 'string') {
-			var request = new XMLHttpRequest();
-			request.open("GET", path, false);
-			request.send(null);
-			var list = JSON.parse(request.responseText);
-			return list.words;
-		} else {
-			return null;
-		}
-	}
-
-	/**
-	 * Return an array of questions.
-	 * @param {*} paths Array of paths each leading to a list.
-	 */
-	getQuestionsFromLists(paths) {
-		var questions = [];
-		paths.forEach(path => {
-			var words = this.getWordsFromList(path);
-			if (typeof words !== 'undefined') {
-				words.forEach(word => {
-					var question = new Question(word.de, word.fr);
-					questions.push(question);
-				});
-			}
-		});
-		return questions;
 	}
 
 	/**
@@ -62,8 +30,8 @@ class Quiz {
 		this.resetUserInterface();
 
 		// Choose a random possibility from the question's word.
-		var possibilities = this.questions[this.index].getWord();
-		var randomIndex = Math.floor(Math.random() * possibilities.length);
+		const possibilities = this.questions[this.index].getWord();
+		const randomIndex = Math.floor(Math.random() * possibilities.length);
 
 		// Update the user interface.
 		switch (this.questions[this.index].language) {
@@ -88,24 +56,22 @@ class Quiz {
 			case false:
 				this.playerAnswered = true;
 
-				var args = this.questions[this.index].verifyAnswer(this.textInput.value);
+				const args = this.questions[this.index].verifyAnswer(this.textInput.value);
+				const correctAnswer = this.questions[this.index].getCorrectAnswers()[args.correctAnswersIndex];
 				
 				// Update the user interface.
 				if (args.correct) {
-					var correctAnswer = this.questions[this.index].getCorrectAnswers()[args.correctAnswersIndex];
-					
 					this.headerInstruction.style.color = '#239b46';
 					this.headerWord.style.color = '#239b46';
 
-					this.headerInstruction.innerHTML = `La bonne réponse est en effet : ${correctAnswer}`;
-					this.headerWord.innerHTML = 'Correct !';
+					this.headerInstruction.innerHTML = `Correct ! La bonne réponse est en effet :`;
+					this.headerWord.innerHTML = `${correctAnswer}`;
 				} else {
-					var correctAnswer = this.questions[this.index].getCorrectAnswers()[0];
 					this.headerInstruction.style.color = '#c83c3c';
 					this.headerWord.style.color = '#c83c3c';
 
-					this.headerInstruction.innerHTML = `La bonne réponse est : ${correctAnswer}`;
-					this.headerWord.innerHTML = 'Incorrect !';
+					this.headerInstruction.innerHTML = `Incorrect ! La bonne réponse est :`;
+					this.headerWord.innerHTML = `${correctAnswer}`;
 				}
 				this.textInput.disabled = true;
 				this.buttonInput.innerHTML = 'Continuer';

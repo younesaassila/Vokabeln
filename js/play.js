@@ -1,25 +1,27 @@
 
 const parameters = new URLSearchParams(window.location.search);
-var id = parameters.get('id');
+const id = parameters.get('id');
+
+let quiz;
 
 if (typeof id !== 'undefined') {
-	var dataAccess = new DataAccess();
-	var paths = dataAccess.getPaths(id);
+	const dataAccess = new DataAccess();
+	const paths = dataAccess.getPaths(id);
 
-	var headerInstruction = document.getElementById("instruction");
-	var headerWord = document.getElementById("word");
-	var textInput = document.getElementById("text-input");
-	var buttonInput = document.getElementById("button-input");
+	const headerInstruction = document.getElementById("instruction");
+	const headerWord = document.getElementById("word");
+	const textInput = document.getElementById("text-input");
+	const buttonInput = document.getElementById("button-input");
 
 	if ((typeof paths !== 'undefined')
 	&& (typeof headerInstruction !== 'undefined')
 	&& (typeof headerWord !== 'undefined')
 	&& (typeof textInput !== 'undefined')
 	&& (typeof buttonInput !== 'undefined')) {
-		var quiz = new Quiz(paths, headerInstruction, headerWord, textInput, buttonInput);
+		quiz = new Quiz(paths, headerInstruction, headerWord, textInput, buttonInput);
 		quiz.loadQuestion();
 
-		var wordCount = quiz.questions.length;
+		const wordCount = quiz.questions.length;
 		document.title += ` (${wordCount} mots)`;
 
 		// Get keyboard input.

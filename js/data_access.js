@@ -43,35 +43,56 @@ class DataAccess {
 		}
 	}
 
+  /**
+   * Returns a list of filepaths associated with the given id. Returns null if
+	 * the id is not associated with any array.
+   * @param {string} id 
+   */
 	getPaths(id) {
 		if ((typeof id === 'string')
 		&& (typeof this.listIDs[id] !== 'undefined')) {
 			return this.listIDs[id];
+		} else {
+			return null;
 		}
 	}
 
+  /**
+   * Returns a list object from a given path. Returns null if the path is not valid.
+   * @param {string} path 
+   */
 	getListFromPath(path) {
 		if (typeof path === 'string') {
-			var request = new XMLHttpRequest();
+			const request = new XMLHttpRequest();
 			request.open("GET", path, false);
 			request.send(null);
-
-			var list = JSON.parse(request.responseText);
+			
+			const list = JSON.parse(request.responseText);
 			return list;
 		} else {
 			return null;
 		}
 	}
 
-	getWordsFromList(path) {
-		if (typeof path === 'string') {
-			var request = new XMLHttpRequest();
-			request.open("GET", path, false);
-			request.send(null);
-			var list = JSON.parse(request.responseText);
-			return list.words;
-		} else {
-			return null;
-		}
+	/**
+	 * Returns an array of questions combining all words from the given lists.
+	 * @param {*} paths 
+	 */
+	getQuestionsFromListPaths(paths) {
+    let questions = [];
+    
+		paths.forEach(path => {
+      const list = this.getListFromPath(path);
+			const words = list.words;
+			
+			if (typeof words !== 'undefined') {
+				words.forEach(word => {
+					let question = new Question(word.de, word.fr);
+					questions.push(question);
+				});
+			}
+    });
+    
+		return questions;
 	}
 }
