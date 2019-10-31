@@ -23,8 +23,8 @@ class Question {
 					break;
 				default:
 					// Randomly set the language.
-					var languages = ['de', 'fr'];
-					var index = Math.floor(Math.random() * languages.length);
+					const languages = ['de', 'fr'];
+					const index = Math.floor(Math.random() * languages.length);
 					this.language = languages[index];
 			}
 		}
@@ -54,7 +54,7 @@ class Question {
 	 * @param {string} answer The player's answer.
 	 */
 	verifyAnswer(answer) {
-		var args = new VerifiedAnswerArgs();
+		const args = new VerifiedAnswerArgs();
 
 		if (typeof answer === 'string') {
 			// Normalize the answer in order not to take into account any accents.
@@ -67,7 +67,7 @@ class Question {
 			// Format the string variable to make it all lowercase letters.
 			answer = answer.toLowerCase();
 
-			var answerWithoutWhitespaces = answer.replace(' ', '');
+			const answerWithoutWhitespaces = answer.replace(' ', '');
 
 			// The answer is an empty string.
 			if (answerWithoutWhitespaces === '') {
@@ -75,11 +75,11 @@ class Question {
 				return args;
 			}
 
-			var correctAnswers = Array.from(this.getCorrectAnswers());
+			const correctAnswers = Array.from(this.getCorrectAnswers());
 
 			// Foreach correct answer.
-			for (var i = 0; i < correctAnswers.length; i++) {
-				var correctAnswer = correctAnswers[i];
+			for (let i = 0; i < correctAnswers.length; i++) {
+				let correctAnswer = correctAnswers[i];
 				correctAnswer = correctAnswer.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 				correctAnswer = correctAnswer.replace(/ß/g, 'ss');
 				correctAnswer = correctAnswer.replace(/œ/g, 'oe');
@@ -101,30 +101,30 @@ class Question {
 			// is an answer that is necessarily composed of more than one word.
 
 			// Create an array containing each word from the answer.
-			var answerSplits = answer.split(' ');
+			const answerSplits = answer.split(' ');
 
 			// Create an array of arrays each containing each word from a correct answer.
-			var correctAnswersSplits = new Array();
+			const correctAnswersSplits = new Array();
 
 			// Foreach element of the correct answers array.
-			for (var i = 0; i < correctAnswers.length; i++) {
-				var correctAnswer = correctAnswers[i];
-				var correctAnswerSplits = correctAnswer.split(' ');
+			for (let i = 0; i < correctAnswers.length; i++) {
+				const correctAnswer = correctAnswers[i];
+				const correctAnswerSplits = correctAnswer.split(' ');
 
 				correctAnswersSplits.push(correctAnswerSplits);
 			}
 
 			// The number of words the player got correctly.
 			// This number must be equal or greater than 2 in order to return true;
-			var correctCount = 0;
-			var correctAnswersIndex = 0;
+			let correctCount = 0;
+			let correctAnswersIndex = 0;
 
 			// Foreach word in the player's answer.
-			for (var i = 0; i < answerSplits.length; i++) {
+			for (let i = 0; i < answerSplits.length; i++) {
 				// Foreach correct answer in the array of correct answers.
-				for (var j = 0; j < correctAnswersSplits.length; j++) {
+				for (let j = 0; j < correctAnswersSplits.length; j++) {
 					// Foreach word in the current correct answer.
-					for (var k = 0; k < correctAnswersSplits[j].length; k++) {
+					for (let k = 0; k < correctAnswersSplits[j].length; k++) {
 						if (answerSplits[i] === correctAnswersSplits[j][k]) {
 							correctCount++;
 							correctAnswersIndex = j;

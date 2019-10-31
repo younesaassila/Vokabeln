@@ -1,13 +1,13 @@
 
 const parameters = new URLSearchParams(window.location.search);
-var id = parameters.get('id');
+const id = parameters.get('id');
 
 if (typeof id !== 'undefined') {
-	var dataAccess = new DataAccess();
-	var paths = dataAccess.getPaths(id);
-	var lists = [];
-	var container = document.getElementById("container");
-	var wordCount = 0;
+	const dataAccess = new DataAccess();
+	const paths = dataAccess.getPaths(id);
+	const lists = [];
+	const container = document.getElementById("container");
+	let wordCount = 0;
 
 	if ((typeof paths !== 'undefined')
 	&& (typeof lists !== 'undefined')
@@ -17,25 +17,25 @@ if (typeof id !== 'undefined') {
 		});
 	
 		lists.forEach(list => {
-			var section = document.createElement("section");
+			const section = document.createElement("section");
 	
 			// Create a header for each list displaying the list's name.
-			var header = document.createElement("h2");
+			const header = document.createElement("h2");
 			header.innerHTML = list.name;
 			section.appendChild(header);
 	
 			// Create a table for each list containing every word.
-			var table = document.createElement("table");
+			const table = document.createElement("table");
 	
 			list.words.forEach(word => {
-				var tr = document.createElement("tr");
-				var tdGerman = document.createElement("td");
-				var tdFrench = document.createElement("td");
+				const tr = document.createElement("tr");
+				const tdGerman = document.createElement("td");
+				const tdFrench = document.createElement("td");
 				tdGerman.className = "td-german";
 				tdFrench.className = "td-french";
 	
-				var tdGermanTextNode = document.createTextNode(word.de[0]);
-				var tdFrenchTextNode = document.createTextNode(word.fr[0]);
+				const tdGermanTextNode = document.createTextNode(word.de[0]);
+				const tdFrenchTextNode = document.createTextNode(word.fr[0]);
 				tdGerman.appendChild(tdGermanTextNode);
 				tdFrench.appendChild(tdFrenchTextNode);
 	
@@ -52,8 +52,8 @@ if (typeof id !== 'undefined') {
 	
 		document.title += ` (${wordCount} mots)`;
 	} else {
-		location.href = 'index.html';
+		location.href = '/';
 	}
 } else {
-	location.href = 'index.html';
+	location.href = '/';
 }
