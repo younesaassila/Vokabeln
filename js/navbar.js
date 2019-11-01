@@ -1,4 +1,3 @@
-
 const navigationBar = document.getElementById('navbar');
 
 const menu = () => {

@@ -1,51 +1,133 @@
-
+// Get the id provided by the url to know what files to load.
 const parameters = new URLSearchParams(window.location.search);
 const id = parameters.get('id');
 
-let quiz;
+// Get all paths associated with the id we just obtained.
+const dataAccess = new DataAccess();
+const paths = dataAccess.getPaths(id);
 
-if (typeof id !== 'undefined') {
-	const dataAccess = new DataAccess();
-	const paths = dataAccess.getPaths(id);
+// HTML elements the script needs.
+const instructionElement = document.querySelector("#instruction");
+const wordElement = document.querySelector("#word");
+const textInputElement = document.querySelector("#text-input");
+const buttonInputElement = document.querySelector("#button-input");
 
-	const headerInstruction = document.getElementById("instruction");
-	const headerWord = document.getElementById("word");
-	const textInput = document.getElementById("text-input");
-	const buttonInput = document.getElementById("button-input");
+// Get an array of questions from the newly gotten paths and create a new quiz.
+const questions = dataAccess.getQuestionsFromListPaths(paths);
+const quiz = new Quiz(questions);
 
-	if ((typeof paths !== 'undefined')
-	&& (typeof headerInstruction !== 'undefined')
-	&& (typeof headerWord !== 'undefined')
-	&& (typeof textInput !== 'undefined')
-	&& (typeof buttonInput !== 'undefined')) {
-		quiz = new Quiz(paths, headerInstruction, headerWord, textInput, buttonInput);
-		quiz.loadQuestion();
-
-		const wordCount = quiz.questions.length;
-		document.title += ` (${wordCount} mots)`;
-
-		// Get keyboard input.
-		window.addEventListener("keydown", function (event) {
-			if (event.defaultPrevented) {
-				// Do nothing if the event was already processed.
-				return;
-			}
-			switch (event.key) {
-				case "Enter":
-					quiz.onClick();
-					break;
-				default:
-					// Quit when this doesn't handle the key event.
-					return;
-			}
-			// Cancel the default action to avoid it being handled twice.
-			event.preventDefault();
-		}, true);
-	} else {
-		headerInstruction.innerHTML = `Une erreur est survenue lors du chargement du quiz.`;
-		headerWord.innerHTML = `Oops!`;
-	}
-} else {
-	headerInstruction.innerHTML = `Aucun chemin d'accès ne correspond à l'identifiant donné.`;
-	headerWord.innerHTML = `Oops!`;
+// Declare all game states.
+const states = {
+	// A new question has been loaded and the player has yet to answer it.
+	ANSWERING: 'answering',
+	// The player has answered the question and is provided with the correct answer.
+	ANSWERED: 'answered'
 }
+
+// The current state of the game.
+let state = states.ANSWERING;
+
+// Reset the UI and display a newly loaded question.
+const loadQuestion = () => {
+	state = states.ANSWERING;
+
+	// Reset the UI as some elements may have been disabled due to the ANSWERED state.
+	instructionElement.style.color = "black";
+	wordElement.style.color = "black";
+	textInputElement.disabled = false;
+	textInputElement.value = "";
+	textInputElement.focus();
+	buttonInputElement.innerHTML = "Vérifier";
+
+	// Question has successfully loaded.
+	if (quiz.loadQuestion()) {
+		// Select a random variant of the question's word.
+		const variants = quiz.questions[quiz.index].getWord();
+		const index = Math.floor(Math.random() * variants.length);
+
+		switch (quiz.questions[quiz.index].language) {
+			case "de":
+				instructionElement.innerHTML = "Traduis en français :";
+				break;
+			case "fr":
+				instructionElement.innerHTML = "Traduis en allemand :";
+				break;
+		}
+
+		wordElement.lang = quiz.questions[quiz.index].language;
+		wordElement.innerHTML = `${variants[index]}`;
+	} else {
+		// Oops!
+		throw new Error("Question couldn't successfully be loaded");
+	}
+}
+
+// Change the UI colors and display the correct answer.
+const answerQuestion = () => {
+	state = states.ANSWERED;
+
+	const args = quiz.answerQuestion(textInputElement.value);
+
+	if (typeof args !== 'undefined') {
+		// The player answered correctly.
+		if (args.correct) {
+			instructionElement.style.color = "#239b46";
+			instructionElement.innerHTML = "Correct ! La bonne réponse est en effet :";
+
+			wordElement.style.color = "#239b46";
+			wordElement.innerHTML = `${args.correctAnswer}`;
+		} else {
+			instructionElement.style.color = "#c83c3c";
+			instructionElement.innerHTML = "Incorrect ! La bonne réponse est :";
+
+			wordElement.style.color = "#c83c3c";
+			wordElement.innerHTML = `${args.correctAnswer}`;
+		}
+
+		textInputElement.disabled = true;
+		buttonInputElement.innerHTML = "Continuer";
+		buttonInputElement.focus();
+	} else {
+		// Oops!
+		throw new Error("quiz.answerQuestion() has returned an undefined value");
+	}
+}
+
+// Display the number of questions in the browser tab's title.
+const wordCount = quiz.questions.length;
+document.title += ` (${wordCount} mots)`;
+
+// Add a click event to the main button.
+buttonInputElement.addEventListener("click", (event) => {
+	if (event.button === 0) {
+		switch (state) {
+			case states.ANSWERING:
+				answerQuestion();
+				break;
+			case states.ANSWERED:
+				loadQuestion();
+				break;
+		}
+	}
+}, false);
+
+// Get keyboard input in order to click on the button when the player presses Enter.
+window.addEventListener("keydown", (event) => {
+	if (event.defaultPrevented) {
+		// Do nothing if the event was already processed.
+		return;
+	}
+	switch (event.key) {
+		case "Enter":
+			buttonInputElement.click();
+			break;
+		default:
+			// Quit when this doesn't handle the key event.
+			return;
+	}
+	// Cancel the default action to avoid it being handled twice.
+	event.preventDefault();
+}, true);
+
+// Start the game!
+loadQuestion();

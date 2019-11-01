@@ -1,4 +1,3 @@
-
 $('.button-list').html(`<i class="fas fa-list-ul"></i> Liste`);
 $('.button-play').html(`<i class="fas fa-play"></i> S'entraîner`);
 

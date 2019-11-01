@@ -72,6 +72,7 @@ class Question {
 			// The answer is an empty string.
 			if (answerWithoutWhitespaces === '') {
 				// The answer is not correct.
+				args.correctAnswer = this.getCorrectAnswers()[0];
 				return args;
 			}
 
@@ -92,7 +93,7 @@ class Question {
 				if (answer === correctAnswer) {
 					// The answer is correct.
 					args.correct = true;
-					args.correctAnswersIndex = i;
+					args.correctAnswer = this.getCorrectAnswers()[i];
 					return args;
 				}
 			}
@@ -136,7 +137,7 @@ class Question {
 			if (correctCount >= 2) {
 				// The answer is correct.
 				args.correct = true;
-				args.correctAnswersIndex = correctAnswersIndex;
+				args.correctAnswer = this.getCorrectAnswers()[correctAnswersIndex];
 				return args;
 			}
 		}
