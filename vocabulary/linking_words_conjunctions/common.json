@@ -7,9 +7,9 @@
 		{ "de": [ "deshalb" ], "fr": [ "c'est pourquoi" ] },
 		{ "de": [ "also" ], "fr": [ "donc" ] },
 		{ "de": [ "jedoch" ], "fr": [ "cependant" ] },
-		{ "de": [ "schliesslich" ], "fr": [ "finalement" ] },
+		{ "de": [ "schließlich" ], "fr": [ "finalement" ] },
 		{ "de": [ "aber" ], "fr": [ "mais" ] },
-		{ "de": [ "oder" ], "fr": [ "ou bien" ] },
+		{ "de": [ "oder" ], "fr": [ "ou" ] },
 		{ "de": [ "und" ], "fr": [ "et" ] },
 		{ "de": [ "denn" ], "fr": [ "car" ] },
 		{ "de": [ "weil" ], "fr": [ "parce que" ] },
@@ -17,6 +17,6 @@
 		{ "de": [ "Da" ], "fr": [ "comme" ] },
 		{ "de": [ "wenn" ], "fr": [ "si" ] },
 		{ "de": [ "wann" ], "fr": [ "quand" ] },
-		{ "de": [ "daß", "dass" ], "fr": [ "que" ] }
+		{ "de": [ "daß" ], "fr": [ "que" ] }
     ]
 }
