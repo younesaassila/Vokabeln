@@ -7,10 +7,10 @@ const dataAccess = new DataAccess();
 const paths = dataAccess.getPaths(id);
 
 // HTML elements the script needs.
-const instructionElement = document.querySelector("#instruction");
-const wordElement = document.querySelector("#word");
-const textInputElement = document.querySelector("#text-input");
-const buttonInputElement = document.querySelector("#button-input");
+const instructionElement = document.querySelector(".quiz-instruction");
+const wordElement = document.querySelector(".quiz-word");
+const textInputElement = document.querySelector(".quiz-text-input");
+const buttonInputElement = document.querySelector(".quiz-button-input");
 
 // Get an array of questions from the newly gotten paths and create a new quiz.
 const questions = dataAccess.getQuestionsFromListPaths(paths);
@@ -32,8 +32,8 @@ const loadQuestion = () => {
 	state = states.ANSWERING;
 
 	// Reset the UI as some elements may have been disabled due to the ANSWERED state.
-	instructionElement.style.color = "black";
-	wordElement.style.color = "black";
+	instructionElement.className = "quiz-instruction";
+	wordElement.className = "quiz-word";
 	textInputElement.disabled = false;
 	textInputElement.value = "";
 	textInputElement.focus();
@@ -71,16 +71,16 @@ const answerQuestion = () => {
 	if (typeof args !== 'undefined') {
 		// The player answered correctly.
 		if (args.correct) {
-			instructionElement.style.color = "#239b46";
+			instructionElement.className += " correct";
+			wordElement.className += " correct";
+			
 			instructionElement.innerHTML = "Correct ! La bonne réponse est en effet :";
-
-			wordElement.style.color = "#239b46";
 			wordElement.innerHTML = `${args.correctAnswer}`;
 		} else {
-			instructionElement.style.color = "#c83c3c";
+			instructionElement.className += " incorrect";
+			wordElement.className += " incorrect";
+			
 			instructionElement.innerHTML = "Incorrect ! La bonne réponse est :";
-
-			wordElement.style.color = "#c83c3c";
 			wordElement.innerHTML = `${args.correctAnswer}`;
 		}
 

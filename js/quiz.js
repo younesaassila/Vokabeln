@@ -29,7 +29,7 @@ class Quiz {
 		if (typeof answer === 'string') {
 			return this.questions[this.index].verifyAnswer(answer);
 		}
-
+		
 		return null;
 	}
 }
