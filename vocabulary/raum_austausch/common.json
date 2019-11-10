@@ -1,7 +1,7 @@
 {
 	"name": "Raum und Austausch",
-    "words": [
-        { "de": [ "vielseitig" ], "fr": [ "polyvalent" ] },
+	"words": [
+		{ "de": [ "vielseitig" ], "fr": [ "polyvalent" ] },
 		{ "de": [ "Mobilität" ], "fr": [ "mobilité" ] },
 		{ "de": [ "die Jugend", "die Jugendliche" ], "fr": [ "les jeunes", "la jeunesse" ] },
 		{ "de": [ "Erfahrung" ], "fr": [ "expérience" ] },
@@ -10,6 +10,8 @@
 		{ "de": [ "die Ferien" ], "fr": [ "les vacances" ] },
 		{ "de": [ "die Sprachen" ], "fr": [ "les langues" ] },
 		{ "de": [ "Austausch" ], "fr": [ "échange" ] },
-		{ "de": [ "Auswanderung" ], "fr": [ "émigration" ] }
-    ]
+		{ "de": [ "Auswanderung" ], "fr": [ "émigration" ] },
+		{ "de": [ "können" ], "fr": [ "pouvoir" ] },
+		{ "de": [ "kennen" ], "fr": [ "connaître" ] }
+	]
 }
