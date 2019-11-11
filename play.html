@@ -20,20 +20,30 @@
   <body>
     <header id="navbar" class="navigation-bar"></header>
     <main>
-      <section>
+      <section id="quiz-container">
         <p class="quiz-instruction">Veuillez patienter.</p>
         <h2 class="quiz-word">Chargement...</h2>
-        <input type="text" class="quiz-text-input" placeholder="La réponse est..."
+        <input id="quiz-text-input" type="text" placeholder="La réponse est..."
         autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" disabled><br>
-        <button class="quiz-button-input">Vérifier</button><br>
+        <button id="quiz-button-input">Vérifier</button><br>
         <small>
           <a href="/feedback.html"><i class="far fa-question-circle"></i>
           Un problème avec cette traduction ? Clique-ici !</a>
         </small>
-        <small>
-          Astuce : Appuyer sur la touche "Entrée" de ton clavier revient à
-          cliquer sur le bouton.
-        </small>
+        <br>
+        <div id="quiz-show-results">
+          <small>
+            Tu souhaites obtenir tes statistiques sur cet entraînement ? Clique
+            sur le bouton ci-dessous.
+          </small>
+          <button id="quiz-end-button">Terminer l'entraînement</button>
+        </div>
+      </section>
+      <section id="results-container">
+        <p id="results-yourscoreis">Ton score est :</p>
+        <h1 id="results-score"></h1>
+        <p id="results-details"></p>
+        <button onclick="location.href='/';">Retour à l'accueil</button>
       </section>
     </main>
     <!-- Load navigation bar -->

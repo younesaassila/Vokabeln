@@ -6,11 +6,18 @@ const id = parameters.get('id');
 const dataAccess = new DataAccess();
 const paths = dataAccess.getPaths(id);
 
-// HTML elements the script needs.
-const instructionElement = document.querySelector(".quiz-instruction");
-const wordElement = document.querySelector(".quiz-word");
-const textInputElement = document.querySelector(".quiz-text-input");
-const buttonInputElement = document.querySelector(".quiz-button-input");
+// HTML elements in the quiz section.
+const quizContainer = document.querySelector("#quiz-container");
+const quizInstruction = document.querySelector(".quiz-instruction");
+const quizWord = document.querySelector(".quiz-word");
+const quizTextInput = document.querySelector("#quiz-text-input");
+const quizButton = document.querySelector("#quiz-button-input");
+const showResultsMessage = document.querySelector("#quiz-show-results");
+const endQuizButton = document.querySelector("#quiz-end-button");
+// HTML elements in the results section.
+const resultsContainer = document.querySelector("#results-container");
+const resultsScore = document.querySelector("#results-score");
+const resultsDetails = document.querySelector("#results-details");
 
 // Get an array of questions from the newly gotten paths and create a new quiz.
 const questions = dataAccess.getQuestionsFromListPaths(paths);
@@ -32,12 +39,12 @@ const loadQuestion = () => {
   state = states.ANSWERING;
 
   // Reset the UI as some elements may have been disabled due to the ANSWERED state.
-  instructionElement.className = "quiz-instruction";
-  wordElement.className = "quiz-word";
-  textInputElement.disabled = false;
-  textInputElement.value = "";
-  textInputElement.focus();
-  buttonInputElement.innerHTML = "Vérifier";
+  quizInstruction.className = "quiz-instruction";
+  quizWord.className = "quiz-word";
+  quizTextInput.disabled = false;
+  quizTextInput.value = "";
+  quizTextInput.focus();
+  quizButton.innerHTML = "Vérifier";
 
   // Question has successfully loaded.
   if (quiz.loadQuestion()) {
@@ -46,15 +53,15 @@ const loadQuestion = () => {
 
     switch (quiz.questions[quiz.index].language) {
       case "de":
-        instructionElement.innerHTML = "Traduis en français :";
+        quizInstruction.innerHTML = "Traduis en français :";
         break;
       case "fr":
-        instructionElement.innerHTML = "Traduis en allemand :";
+        quizInstruction.innerHTML = "Traduis en allemand :";
         break;
     }
 
-    wordElement.lang = quiz.questions[quiz.index].language;
-    wordElement.innerHTML = `${variants[0]}`;
+    quizWord.lang = quiz.questions[quiz.index].language;
+    quizWord.innerHTML = `${variants[0]}`;
   } else {
     throw new Error("Question couldn't successfully be loaded.");
   }
@@ -64,27 +71,28 @@ const loadQuestion = () => {
 const answerQuestion = () => {
   state = states.ANSWERED;
 
-  const args = quiz.answerQuestion(textInputElement.value);
+  const args = quiz.answerQuestion(quizTextInput.value);
 
   if (typeof args !== 'undefined') {
     // The player answered correctly.
     if (args.correct) {
-      instructionElement.className += " correct";
-      wordElement.className += " correct";
+      quizInstruction.className += " correct";
+      quizWord.className += " correct";
       
-      instructionElement.innerHTML = "Correct ! La bonne réponse est en effet :";
-      wordElement.innerHTML = `${args.correctAnswer}`;
+      quizInstruction.innerHTML = "Correct ! La bonne réponse est en effet :";
+      quizWord.innerHTML = `${args.correctAnswer}`;
     } else {
-      instructionElement.className += " incorrect";
-      wordElement.className += " incorrect";
+      quizInstruction.className += " incorrect";
+      quizWord.className += " incorrect";
       
-      instructionElement.innerHTML = "Incorrect ! La bonne réponse est :";
-      wordElement.innerHTML = `${args.correctAnswer}`;
+      quizInstruction.innerHTML = "Incorrect ! La bonne réponse est :";
+      quizWord.innerHTML = `${args.correctAnswer}`;
     }
 
-    textInputElement.disabled = true;
-    buttonInputElement.innerHTML = "Continuer";
-    buttonInputElement.focus();
+    showResultsMessage.style.display = "block";
+    quizTextInput.disabled = true;
+    quizButton.innerHTML = "Continuer";
+    quizButton.focus();
   } else {
     throw new Error(
       "The quiz object has returned 'undefined' when asked to verify the user's answer."
@@ -97,7 +105,7 @@ const wordCount = quiz.questions.length;
 document.title += ` (${wordCount} mots)`;
 
 // Add a click event to the main button.
-buttonInputElement.addEventListener("click", (event) => {
+quizButton.addEventListener("click", (event) => {
   if (event.button === 0) {
     switch (state) {
       case states.ANSWERING:
@@ -118,7 +126,7 @@ window.addEventListener("keydown", (event) => {
   }
   switch (event.key) {
     case "Enter":
-      buttonInputElement.click();
+      quizButton.click();
       break;
     default:
       // Quit when this doesn't handle the key event.
@@ -127,6 +135,16 @@ window.addEventListener("keydown", (event) => {
   // Cancel the default action to avoid it being handled twice.
   event.preventDefault();
 }, true);
+
+endQuizButton.addEventListener("click", (event) => {
+  if (event.button === 0) {
+    quizContainer.style.display = "none";
+    const scoreOn20 = Math.floor((quiz.stats.correctCount / quiz.stats.answeredCount * 20) * 10) / 10;
+    resultsScore.innerHTML = `${scoreOn20}/20`;
+    resultsDetails.innerHTML = `Tu as répondu correctement à ${quiz.stats.correctCount} questions sur ${quiz.stats.answeredCount}.`;
+    resultsContainer.style.display = "block";
+  }
+}, false);
 
 // Start the game!
 loadQuestion();

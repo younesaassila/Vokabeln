@@ -2,6 +2,10 @@ class Quiz {
   constructor(questions) {
     this.questions = questions;
     this.index = 0;
+    this.stats = {
+      correctCount: 0,
+      answeredCount: 0
+    }
   }
 
   /**
@@ -10,6 +14,11 @@ class Quiz {
    * If left empty, it will be set to a random number.
    */
   loadQuestion(index = Math.floor(Math.random() * this.questions.length)) {
+    while (index === this.index) {
+      // Reroll the index in order not to prompt the user with the same question.
+      index = Math.floor(Math.random() * this.questions.length);
+    }
+
     this.index = index;
 
     if (typeof this.questions[this.index] !== 'undefined') {
@@ -27,9 +36,13 @@ class Quiz {
    */
   answerQuestion(answer) {
     if (typeof answer === 'string') {
-      return this.questions[this.index].verifyAnswer(answer);
+      const args = this.questions[this.index].verifyAnswer(answer);
+      if (args.correct) {
+        this.stats.correctCount++;
+      }
+      this.stats.answeredCount++;
+      return args;
     }
-    
     return null;
   }
 }
