@@ -12,7 +12,6 @@ const quizInstruction = document.querySelector(".quiz-instruction");
 const quizWord = document.querySelector(".quiz-word");
 const quizTextInput = document.querySelector("#quiz-text-input");
 const quizButton = document.querySelector("#quiz-button-input");
-const showResultsMessage = document.querySelector("#quiz-show-results");
 const endQuizButton = document.querySelector("#quiz-end-button");
 // HTML elements in the results section.
 const resultsContainer = document.querySelector("#results-container");
@@ -89,7 +88,7 @@ const answerQuestion = () => {
       quizWord.innerHTML = `${args.correctAnswer}`;
     }
 
-    showResultsMessage.style.display = "block";
+    endQuizButton.disabled = false;
     quizTextInput.disabled = true;
     quizButton.innerHTML = "Continuer";
     quizButton.focus();
@@ -147,4 +146,5 @@ endQuizButton.addEventListener("click", (event) => {
 }, false);
 
 // Start the game!
+endQuizButton.disabled = true;
 loadQuestion();

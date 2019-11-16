@@ -86,7 +86,7 @@ class Question {
 
       const correctAnswers = Array.from(this.getCorrectAnswers());
 
-      // Test for a perfect match.
+      // Test for a perfect match with every correct answer.
       for (let [index, correctAnswer] of correctAnswers.entries()) {
         let normalized = this.normalizeString(correctAnswer);
         correctAnswers[index] = normalized;
@@ -131,6 +131,8 @@ class Question {
         }
       }
 
+      // TODO: Change this threshold to be proportional to the number of words
+      // the correct answer contains.
       if (correctCount >= 2) {
         // The answer is correct.
         args.correct = true;

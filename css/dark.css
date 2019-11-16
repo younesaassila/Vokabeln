@@ -1,0 +1,17 @@
+:root {
+	--primary-background-color: rgb(38, 38, 38);
+	--secondary-background-color: rgb(25, 25, 25);
+	--primary-color: white;
+	--secondary-color: rgb(190, 190, 190);
+	--tertiary-color: rgb(64, 64, 64);
+	--link-color: #4da6ff;
+	--link-hover-color: #80bfff;
+	--correct-color: #53c685;
+	--incorrect-color: #de5454;
+	--button-background-color: #4881ea;
+	--button-border-color: #154eb7;
+	--button-hover-background-color: #5f91ec;
+	--button-play-background-color: #339961;
+	--button-play-border-color: #194d30;
+	--button-play-hover-background-color: #39ac6d;
+}

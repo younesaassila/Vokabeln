@@ -2,14 +2,14 @@ class DataAccess {
   constructor() {
     this.listIDs = {
       "raum_austausch": [
-        "vocabulary/raum_austausch/common.json",
+        "vocabulary/raum_austausch/general.json",
         "vocabulary/raum_austausch/reisen.json",
         "vocabulary/raum_austausch/ferien.json",
         "vocabulary/raum_austausch/sprachen.json",
         "vocabulary/raum_austausch/auswanderung.json"
       ],
       "raum_austausch:*": [
-        "vocabulary/raum_austausch/common.json",
+        "vocabulary/raum_austausch/general.json",
         "vocabulary/raum_austausch/reisen.json",
         "vocabulary/raum_austausch/ferien.json",
         "vocabulary/raum_austausch/sprachen.json",
@@ -38,7 +38,7 @@ class DataAccess {
         "vocabulary/raum_austausch/docs/voltaire_programm.json"
       ],
       "linking_words_conjunctions": [
-        "vocabulary/linking_words_conjunctions/common.json"
+        "vocabulary/linking_words_conjunctions/general.json"
       ]
     }
   }
