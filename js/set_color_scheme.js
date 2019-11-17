@@ -15,12 +15,15 @@ if (localStorage.getItem("theme") === "dark") {
   document.documentElement.style.display = 'none';
   document.head.insertAdjacentHTML(
     'beforeend',
-    '<link rel="stylesheet" href="/css/dark.css" onload="document.documentElement.style.display = \'\'">'
+    '<link rel="stylesheet" href="/css/dark.css" id="link-css-theme" onload="document.documentElement.style.display = \'\'">'
   );
 } else {
   document.documentElement.style.display = 'none';
   document.head.insertAdjacentHTML(
     'beforeend',
-    '<link rel="stylesheet" href="/css/light.css" onload="document.documentElement.style.display = \'\'">'
+    '<link rel="stylesheet" href="/css/light.css" id="link-css-theme" onload="document.documentElement.style.display = \'\'">'
   );
 }
+
+// TODO: Replace this with a declaration let link = new element
+// and just change the href depending on the theme.
