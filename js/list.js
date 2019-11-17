@@ -36,8 +36,22 @@ if ((typeof paths !== 'undefined')
       tdGerman.className = "td-german";
       tdFrench.className = "td-french";
 
-      const tdGermanTextNode = document.createTextNode(word.de[0]);
-      const tdFrenchTextNode = document.createTextNode(word.fr[0]);
+      let tdGermanText = "";
+      for (let variant of word.de) {
+        tdGermanText += `${variant}, `;
+      }
+      // Removing the extra 2 characters at the end of the finalized string.
+      tdGermanText = tdGermanText.substring(0, tdGermanText.length - 2);
+
+      let tdFrenchText = "";
+      for (let variant of word.fr) {
+        tdFrenchText += `${variant}, `;
+      }
+      // Removing the extra 2 characters at the end of the finalized string.
+      tdFrenchText = tdFrenchText.substring(0, tdFrenchText.length - 2);
+
+      const tdGermanTextNode = document.createTextNode(tdGermanText);
+      const tdFrenchTextNode = document.createTextNode(tdFrenchText);
       tdGerman.appendChild(tdGermanTextNode);
       tdFrench.appendChild(tdFrenchTextNode);
 

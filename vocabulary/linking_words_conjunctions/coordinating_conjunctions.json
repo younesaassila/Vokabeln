@@ -1,6 +1,6 @@
 {
-	"name": "Mots de liaison et conjonctions",
-    "words": [
+	"name": "Conjonctions de coordination",
+	"words": [
 		{ "de": [ "In der Tat" ], "fr": [ "en effet" ] },
 		{ "de": [ "Dann" ], "fr": [ "ensuite" ] },
 		{ "de": [ "Ausserdem" ], "fr": [ "de plus" ] },
@@ -18,5 +18,5 @@
 		{ "de": [ "wenn" ], "fr": [ "si" ] },
 		{ "de": [ "wann" ], "fr": [ "quand" ] },
 		{ "de": [ "daß" ], "fr": [ "que" ] }
-    ]
+	]
 }

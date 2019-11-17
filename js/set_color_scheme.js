@@ -1,29 +1,34 @@
-// If the current theme variable is undefined, set it in regard to the user's
-// theme preference if possible.
+// If the variable storing the user's preferred color scheme is not defined,
+// check for browser support of this feature and if the user has expressed
+// a preference.
 if (!localStorage.getItem("theme")) {
-  if (!(window.matchMedia("(prefers-color-scheme: dark)").media === "not all")
-  && (window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-    // Browser supports dark mode and the user prefers it!
+  const browserSupport =
+    !(window.matchMedia("(prefers-color-scheme: dark)").media === "not all");
+  const prefersDarkColorScheme =
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  
+  if (browserSupport && prefersDarkColorScheme) {
     localStorage.setItem("theme", "dark");
   } else {
     localStorage.setItem("theme", "light");
   }
 }
 
-// Insert the stylesheet corresponding to the current theme in the head tag.
-if (localStorage.getItem("theme") === "dark") {
-  document.documentElement.style.display = 'none';
-  document.head.insertAdjacentHTML(
-    'beforeend',
-    '<link rel="stylesheet" href="/css/dark.css" id="link-css-theme" onload="document.documentElement.style.display = \'\'">'
-  );
-} else {
-  document.documentElement.style.display = 'none';
-  document.head.insertAdjacentHTML(
-    'beforeend',
-    '<link rel="stylesheet" href="/css/light.css" id="link-css-theme" onload="document.documentElement.style.display = \'\'">'
-  );
+const stylesheetColorSchemeLink = document.createElement("link");
+stylesheetColorSchemeLink.rel = "stylesheet";
+stylesheetColorSchemeLink.href = "/css/light.css";
+stylesheetColorSchemeLink.id = "stylesheet-color-scheme";
+stylesheetColorSchemeLink.onload = () => {
+  document.documentElement.style.display = '';
 }
 
-// TODO: Replace this with a declaration let link = new element
-// and just change the href depending on the theme.
+// Hide the document element to let the browser fully load the appropriate
+// stylesheet in order to avoid a 'light flash' effect if the user prefers
+// the dark color scheme.
+document.documentElement.style.display = "none";
+
+if (localStorage.getItem("theme") === "dark") {
+  stylesheetColorSchemeLink.href = "/css/dark.css";
+}
+
+document.head.appendChild(stylesheetColorSchemeLink);

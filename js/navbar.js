@@ -37,19 +37,19 @@ switch (localStorage.getItem("theme")) {
 
 // Update the current theme when the user ticks/unticks the checkbox.
 themeCheckbox.addEventListener("change", (e) => {
-  const cssLink = document.getElementById("link-css-theme");
+  const stylesheetLink = document.getElementById("stylesheet-color-scheme");
   if (e.target.checked) {
     // Enable dark theme.
     localStorage.setItem("theme", "dark");
     themeIcon.className = "fas fa-moon";
     themeSwitch.setAttribute("title", "Désactiver le thème sombre");
-    cssLink.href = "/css/dark.css";
+    stylesheetLink.href = "/css/dark.css";
   } else {
     // Enable light theme.
     localStorage.setItem("theme", "light");
     themeIcon.className = "far fa-moon";
     themeSwitch.setAttribute("title", "Activer le thème sombre");
-    cssLink.href = "/css/light.css"
+    stylesheetLink.href = "/css/light.css"
   }
 }, false);
 

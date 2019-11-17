@@ -1,0 +1,12 @@
+{
+	"name": "Mots de liaison",
+	"words": [
+		{ "de": [ "In der Tat" ], "fr": [ "en effet" ] },
+		{ "de": [ "Dann" ], "fr": [ "ensuite" ] },
+		{ "de": [ "Ausserdem" ], "fr": [ "de plus" ] },
+		{ "de": [ "deshalb" ], "fr": [ "c'est pourquoi" ] },
+		{ "de": [ "also" ], "fr": [ "donc" ] },
+		{ "de": [ "jedoch" ], "fr": [ "cependant" ] },
+		{ "de": [ "schließlich" ], "fr": [ "finalement" ] }
+	]
+}

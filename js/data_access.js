@@ -38,7 +38,8 @@ class DataAccess {
         "vocabulary/raum_austausch/docs/voltaire_programm.json"
       ],
       "linking_words_conjunctions": [
-        "vocabulary/linking_words_conjunctions/general.json"
+        "vocabulary/linking_words_conjunctions/linking_words.json",
+        "vocabulary/linking_words_conjunctions/coordinating_conjunctions.json"
       ]
     }
   }
