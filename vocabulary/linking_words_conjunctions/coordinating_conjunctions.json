@@ -1,13 +1,6 @@
 {
 	"name": "Conjonctions de coordination",
 	"words": [
-		{ "de": [ "In der Tat" ], "fr": [ "en effet" ] },
-		{ "de": [ "Dann" ], "fr": [ "ensuite" ] },
-		{ "de": [ "Ausserdem" ], "fr": [ "de plus" ] },
-		{ "de": [ "deshalb" ], "fr": [ "c'est pourquoi" ] },
-		{ "de": [ "also" ], "fr": [ "donc" ] },
-		{ "de": [ "jedoch" ], "fr": [ "cependant" ] },
-		{ "de": [ "schließlich" ], "fr": [ "finalement" ] },
 		{ "de": [ "aber" ], "fr": [ "mais" ] },
 		{ "de": [ "oder" ], "fr": [ "ou" ] },
 		{ "de": [ "und" ], "fr": [ "et" ] },

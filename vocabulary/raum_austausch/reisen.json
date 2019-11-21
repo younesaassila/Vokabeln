@@ -56,10 +56,10 @@
 		{ "de": [ "vershiedene Sitten" ], "fr": [ "traditions différentes" ] },
 		{ "de": [ "finden" ], "fr": [ "trouver" ] },
 		{ "de": [ "das Wetter" ], "fr": [ "la météo" ] },
-		{ "de": [ "andere" ], "fr": [ "autre", "différent" ] },
 		{ "de": [ "anpassen" ], "fr": [ "s'adapter", "adapter" ] },
-		{ "de": [ "Heimweh", "Nostalgie" ], "fr": [ "mal du pays", "nostalgie" ] },
-		{ "de": [ "Sehnsucht" ], "fr": [ "envie", "désir", "manque" ] },
-		{ "de": [ "fühlen" ], "fr": [ "sentir", "ressentir" ] }
+		{ "de": [ "Heimweh"], "fr": [ "mal du pays" ] },
+		{ "de": [ "Nostalgie" ], "fr": [ "nostalgie" ] },
+		{ "de": [ "Sehnsucht" ], "fr": [ "envie", "désir" ] },
+		{ "de": [ "fühlen" ], "fr": [ "ressentir" ] }
     ]
 }

@@ -47,8 +47,9 @@ const loadQuestion = () => {
 
   // Question has successfully loaded.
   if (quiz.loadQuestion()) {
-    // All of the word's variants.
+    // Choose a random variant of the question's word.
     const variants = quiz.questions[quiz.index].getWord();
+    const randomVariantIndex = Math.floor(Math.random() * variants.length);
 
     switch (quiz.questions[quiz.index].language) {
       case "de":
@@ -60,7 +61,7 @@ const loadQuestion = () => {
     }
 
     quizWord.lang = quiz.questions[quiz.index].language;
-    quizWord.innerHTML = `${variants[0]}`;
+    quizWord.innerHTML = `${variants[randomVariantIndex]}`;
   } else {
     throw new Error("Question couldn't successfully be loaded.");
   }
