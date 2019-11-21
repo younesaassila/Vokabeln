@@ -42,6 +42,7 @@
 		{ "de": [ "manche" ], "fr": [ "certains" ] },
 		{ "de": [ "heute" ], "fr": [ "aujourd'hui" ] },
 		{ "de": [ "früher" ], "fr": [ "autrefois" ] },
-		{ "de": [ "in Zukunft" ], "fr": [ "à l'avenir" ] }
+		{ "de": [ "in Zukunft" ], "fr": [ "à l'avenir" ] },
+		{ "de": [ "toll" ], "fr": [ "génial" ] }
 	]
 }
