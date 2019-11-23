@@ -56,11 +56,12 @@ class Question {
    */
   normalizeString(str) {
     let normalized = str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    normalized = normalized.toLowerCase();
     normalized = normalized.replace(/ß/g, 'ss');
     normalized = normalized.replace(/œ/g, 'oe');
     normalized = normalized.replace(/'/g, ' ');
     normalized = normalized.replace(/’/g, ' ');
-    normalized = normalized.toLowerCase();
+    
     normalized = normalized.trim();
     return normalized;
   }
@@ -72,8 +73,10 @@ class Question {
   verifyAnswer(answer) {
     const args = new VerifiedAnswerArgs();
 
+    // Verify that the answer is a string.
     if (typeof answer === 'string') {
-      // Normalize the answer in order not to take into account any accents.
+      // Normalize the answer in order to not take into account any
+      // language-specific characters.
       answer = this.normalizeString(answer);
 
       // Test if the user's answer is an empty string.
@@ -103,40 +106,49 @@ class Question {
       // is an answer that is necessarily composed of more than one word.
 
       // Create an array containing each word from the answer.
-      const answerSplits = answer.split(' ');
+      const answerWords = answer.split(' ');
 
       // Create an array of arrays each containing every word from a correct answer.
-      const correctAnswersSplits = new Array();
+      const correctAnswersWords = new Array();
       for (let correctAnswer of correctAnswers) {
-        const correctAnswerSplits = correctAnswer.split(' ');
-        correctAnswersSplits.push(correctAnswerSplits);
+        correctAnswersWords.push(correctAnswer.split(' '));
       }
 
       // The number of words the player got correctly.
-      // This number must be equal or greater than 2 in order to return correct.
-      let correctCount = 0;
-      let correctAnswersIndex = 0;
+      // This number must be equal or greater than 1 in order to return correct.
+      let correctAnswerWordCount = 0;
+      let correctAnswerIndex = 0;
 
-      // Foreach word in the player's answer.
-      for (let i = 0; i < answerSplits.length; i++) {
-        // Foreach correct answer in the array of correct answers.
-        for (let j = 0; j < correctAnswersSplits.length; j++) {
-          // Foreach word in the current correct answer.
-          for (let k = 0; k < correctAnswersSplits[j].length; k++) {
-            if (answerSplits[i] === correctAnswersSplits[j][k]) {
-              correctCount++;
-              correctAnswersIndex = j;
+      // For each correct answer.
+      for (let [index, correctAnswerWords] of correctAnswersWords.entries()) {
+        // For each word of the current correct answer.
+        for (let correctAnswerWord of correctAnswerWords) {
+          // For each word of the player's answer.
+          for (let answerWord of answerWords) {
+            // If the current player answer's word and current correct answer's
+            // word match, increase the correct answer word count.
+            if (answerWord === correctAnswerWord) {
+              correctAnswerWordCount++;
+              correctAnswerIndex = index;
             }
           }
         }
       }
 
-      // TODO: Change this threshold to be proportional to the number of words
-      // the correct answer contains.
-      if (correctCount >= 2) {
-        // The answer is correct.
+      // The number of words that returned correct in the player's answer has
+      // to be at least half of the correct answer word count.
+      const threshold = Math.round(correctAnswersWords[correctAnswerIndex].length / 2);
+      
+      // In case the threshold is lower than 1, set it to 1 to avoid marking
+      // an answer as correct if it's not necessarily. 
+      if (threshold < 1) {
+        threshold = 1;
+      }
+
+      if (correctAnswerWordCount >= threshold) {
+        // The answer is considered correct.
         args.correct = true;
-        args.correctAnswer = this.getCorrectAnswers()[correctAnswersIndex];
+        args.correctAnswer = this.getCorrectAnswers()[correctAnswerIndex];
         return args;
       }
     }

@@ -23,15 +23,15 @@ const themeCheckbox = document.querySelector(
 const themeIcon = document.querySelector('header #moon-icon');
 
 switch (localStorage.getItem("theme")) {
-  case "light":
-    themeSwitch.setAttribute("title", "Activer le thème sombre");
-    themeCheckbox.checked = false;
-    themeIcon.className = "far fa-moon";
-    break;
   case "dark":
     themeSwitch.setAttribute("title", "Désactiver le thème sombre");
     themeCheckbox.checked = true;
     themeIcon.className = "fas fa-moon";
+    break;
+  default:
+    themeSwitch.setAttribute("title", "Activer le thème sombre");
+    themeCheckbox.checked = false;
+    themeIcon.className = "far fa-moon";
     break;
 }
 
