@@ -1,20 +1,20 @@
 {
-	"name": "die Ferien",
+	"name": "Ferien",
     "words": [
 		{ "de": [ "chillen" ], "fr": [ "se détendre", "se relaxer" ] },
-		{ "de": [ "aus dem Alltag gehen", "den Alltag brechen" ], "fr": [ "rompre avec la vie de tous les jours", "rompre avec le quotidien", "sortir de son quotidien" ] },
+		{ "de": [ "aus dem Alltag gehen", "den Alltag brechen" ], "fr": [ "rompre avec le quotidien" ] },
 		{ "de": [ "reisen" ], "fr": [ "voyager" ] },
 		{ "de": [ "die Familie besuchen" ], "fr": [ "visiter la famille" ] },
 		{ "de": [ "Orte" ], "fr": [ "lieux" ] },
-		{ "de": [ "Unterkunft" ], "fr": [ "logement", "hébergement" ] },
+		{ "de": [ "die Unterkunft" ], "fr": [ "le logement", "l'hébergement" ] },
 		{ "de": [ "übernachten" ], "fr": [ "passer la nuit" ]},
 		{ "de": [ "ein Hotel" ], "fr": [ "un hôtel" ] },
 		{ "de": [ "ein Haus" ], "fr": [ "une maison" ] },
 		{ "de": [ "Jugendherberge" ], "fr": [ "auberge de jeunesse" ] },
 		{ "de": [ "bei dem Einwohner" ], "fr": [ "chez l'habitant" ] },
 		{ "de": [ "Wohnung" ], "fr": [ "appartement" ] },
-		{ "de": [ "Campingwagen" ], "fr": [ "camping-car", "caravanes" ] },
+		{ "de": [ "Campingwagen" ], "fr": [ "camping-car" ] },
 		{ "de": [ "in dem Zelt" ], "fr": [ "dans la tente" ] },
-		{ "de": [ "Wohngemeinschaft" ], "fr": [ "appartement en colocation", "appartement partagé" ] }
+		{ "de": [ "Wohngemeinschaft" ], "fr": [ "appartement en colocation" ] }
     ]
 }

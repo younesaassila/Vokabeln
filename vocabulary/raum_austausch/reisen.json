@@ -1,5 +1,5 @@
 {
-	"name": "die Reisen",
+	"name": "Reisen",
     "words": [
 		{ "de": [ "die Reise" ], "fr": [ "le voyage" ] },
 		{ "de": [ "entdecken" ], "fr": [ "découvrir" ] },
@@ -37,9 +37,9 @@
 		{ "de": [ "der Beruf" ], "fr": [ "la profession" ] },
 		{ "de": [ "Studium", "Studiengänge" ], "fr": [ "études" ] },
 		{ "de": [ "besichtigen", "besuchen" ], "fr": [ "visiter" ] },
-		{ "de": [ "ein Abenteuer erleben" ], "fr": [ "partir à l'aventure", "vivre une aventure" ] },
+		{ "de": [ "ein Abenteuer erleben" ], "fr": [ "vivre une aventure" ] },
 		{ "de": [ "selbstständig werden" ], "fr": [ "être autonome" ] },
-		{ "de": [ "Erfahrung sammeln" ], "fr": [ "acquérir de l'expérience", "gagner de l'expérience" ] },
+		{ "de": [ "Erfahrung sammeln" ], "fr": [ "acquérir de l'expérience" ] },
 		{ "de": [ "die Sitten" ], "fr": [ "les traditions" ] },
 		{ "de": [ "die Essgewohnheiten" ], "fr": [ "les habitudes alimentaires" ] },
 		{ "de": [ "bereisen" ], "fr": [ "déambuler" ] },
@@ -49,17 +49,17 @@
 		{ "de": [ "erweitern" ], "fr": [ "agrandir", "élargir", "étendre" ] },
 		{ "de": [ "knüpfen" ], "fr": [ "nouer" ] },
 		{ "de": [ "teuer" ], "fr": [ "cher" ] },
-		{ "de": [ "billig" ], "fr": [ "bon marché", "à bas prix", "pas cher" ] },
+		{ "de": [ "billig" ], "fr": [ "bon marché", "pas cher" ] },
 		{ "de": [ "die Sprache nicht beherrschen" ], "fr": [ "ne pas connaître la langue" ] },
 		{ "de": [ "weit sein" ], "fr": [ "être loin" ] },
 		{ "de": [ "vermissen", "fehlen" ], "fr": [ "manquer" ] },
-		{ "de": [ "vershiedene Sitten" ], "fr": [ "traditions différentes", "coutumes différentes", "habitudes différentes" ] },
+		{ "de": [ "vershiedene Sitten" ], "fr": [ "traditions différentes" ] },
 		{ "de": [ "finden" ], "fr": [ "trouver" ] },
 		{ "de": [ "das Wetter" ], "fr": [ "la météo" ] },
-		{ "de": [ "andere" ], "fr": [ "autre", "différent" ] },
 		{ "de": [ "anpassen" ], "fr": [ "s'adapter", "adapter" ] },
-		{ "de": [ "Heimweh", "Nostalgie" ], "fr": [ "mal du pays", "nostalgie" ] },
-		{ "de": [ "Sehnsucht" ], "fr": [ "envie", "désir", "manque" ] },
-		{ "de": [ "fühlen" ], "fr": [ "sentir", "ressentir" ] }
+		{ "de": [ "Heimweh"], "fr": [ "mal du pays" ] },
+		{ "de": [ "Nostalgie" ], "fr": [ "nostalgie" ] },
+		{ "de": [ "Sehnsucht" ], "fr": [ "envie", "désir" ] },
+		{ "de": [ "fühlen" ], "fr": [ "ressentir" ] }
     ]
 }

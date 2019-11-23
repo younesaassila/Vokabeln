@@ -1,9 +1,9 @@
 {
 	"name": "Auswanderung",
     "words": [
-		{ "de": [ "die Wunderjahren" ], "fr": [ "les années miracles", "les années miraculeuses" ] },
+		{ "de": [ "die Wunderjahren" ], "fr": [ "les années miraculeuses", "les années miracles" ] },
 		{ "de": [ "mehr Geld verdienen" ], "fr": [ "gagner plus d'argent" ] },
-		{ "de": [ "wollen", "möchten" ], "fr": [ "vouloir" ] },
+		{ "de": [ "möchten" ], "fr": [ "vouloir" ] },
 		{ "de": [ "die Flüchtlinge" ], "fr": [ "les réfugiés" ] },
 		{ "de": [ "die Asylbewerber" ], "fr": [ "les demandeurs d'asile" ] },
 		{ "de": [ "fliehen" ], "fr": [ "fuir" ] },
@@ -11,15 +11,16 @@
 		{ "de": [ "die Armut" ], "fr": [ "la pauvreté" ] },
 		{ "de": [ "die Arbeitslosigkeit" ], "fr": [ "le chômage" ] },
 		{ "de": [ "der Krieg" ], "fr": [ "la guerre" ] },
-		{ "de": [ "Misswirtschaft" ], "fr": [ "corruption" ] },
-		{ "de": [ "Ausgrenzung" ], "fr": [ "exclusion", "mis à l'écart" ] },
+		{ "de": [ "die Misswirtschaft" ], "fr": [ "la mauvaise gestion" ] },
+		{ "de": [ "die Korruption", "die Bestechung" ], "fr": [ "la corruption" ] },
+		{ "de": [ "Ausgrenzung" ], "fr": [ "exclusion" ] },
 		{ "de": [ "ausschliessen" ], "fr": [ "expulser" ] },
-		{ "de": [ "ein neues leben führen" ], "fr": [ "vivre une nouvelle vie", "mener une nouvelle vie" ] },
+		{ "de": [ "ein neues Leben führen" ], "fr": [ "mener une nouvelle vie" ] },
 		{ "de": [ "die Sicherkeit" ], "fr": [ "la sécurité" ] },
 		{ "de": [ "den Frieden" ], "fr": [ "la paix" ] },
-		{ "de": [ "Grenzen stellen" ], "fr": [ "mettre en place des frontières", "établir des frontières" ] },
-		{ "de": [ "Grenze" ], "fr": [ "frontière" ] },
-		{ "de": [ "eine Willkommenspolitik führen" ], "fr": [ "mettre en place une politique de bienvenue", "avoir une politique de bienvenue", "mener une politique de bienvenue" ] },
+		{ "de": [ "Grenzen stellen" ], "fr": [ "mettre en place des frontières" ] },
+		{ "de": [ "die Grenze" ], "fr": [ "la frontière" ] },
+		{ "de": [ "eine Willkommenspolitik führen" ], "fr": [ "mener une politique de bienvenue" ] },
 		{ "de": [ "die Verälterung der Bevölkerung" ], "fr": [ "le vieillissement de la population" ] }
     ]
 }

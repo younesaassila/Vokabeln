@@ -1,11 +1,12 @@
 {
-	"name": "die Sprachen",
+	"name": "Sprachen",
 	"words": [
-		{ "de": [ "die Einwohner treffen" ], "fr": [ "rencontrer les habitants", "rencontrez les habitants" ] },
+		{ "de": [ "die Einwohner treffen" ], "fr": [ "rencontrer les habitants" ] },
 		{ "de": [ "neue Leute treffen" ], "fr": [ "rencontrer de nouvelles personnes" ] },
-		{ "de": [ "in der Schule", "in der Gymnasium" ], "fr": [ "à l'école", "au lycée" ] },
+		{ "de": [ "in der Schule" ], "fr": [ "à l'école" ] },
+		{ "de": [ "in der Gymnasium" ], "fr": [ "au lycée" ] },
 		{ "de": [ "auf der Universität", "auf die Hochschule" ], "fr": [ "à l'université" ] },
 		{ "de": [ "mit einem Austausch" ], "fr": [ "avec un échange" ] },
-		{ "de": [ "ein Gap Jahr machen" ], "fr": [ "faire une année sabbatique", "faire une année de césure" ] }
+		{ "de": [ "ein Gap Jahr machen" ], "fr": [ "faire une année sabbatique" ] }
 	]
 }
