@@ -40,6 +40,11 @@ class DataAccess {
       "linking_words_conjunctions": [
         "vocabulary/linking_words_conjunctions/linking_words.json",
         "vocabulary/linking_words_conjunctions/coordinating_conjunctions.json"
+      ],
+      "idee_des_fortschritts": [
+        "vocabulary/idee_des_fortschritts/general.json",
+        "vocabulary/idee_des_fortschritts/deutschen_erfindungen.json",
+        "vocabulary/idee_des_fortschritts/praktischen_erfindungen.json"
       ]
     }
   }

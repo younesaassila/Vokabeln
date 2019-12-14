@@ -1,0 +1,19 @@
+{
+	"name": "Die Idee des Fortschritts",
+    "words": [
+		{ "de": [ "der Fortschritt" ], "fr": [ "le progrès" ] },
+		{ "de": [ "die Erfindung" ], "fr": [ "l'invention" ] },
+		{ "de": [ "der Erfinder" ], "fr": [ "l'inventeur" ] },
+		{ "de": [ "das Erfindungsjahr" ], "fr": [ "l'année d'invention" ] },
+        { "de": [ "der Bereich" ], "fr": [ "le domaine" ] },
+        { "de": [ "die Technologie" ], "fr": [ "la technologie" ] },
+        { "de": [ "in dem Transport" ], "fr": [ "dans le transport" ] },
+		{ "de": [ "in der Nahrung" ], "fr": [ "dans l'alimentation" ] },
+		{ "de": [ "die Medien" ], "fr": [ "les médias" ] },
+		{ "de": [ "in der Mode" ], "fr": [ "dans la mode" ] },
+		{ "de": [ "in der Energie" ], "fr": [ "dans l'énergie" ] },
+		{ "de": [ "in der Wissenschaft" ], "fr": [ "dans les sciences" ] },
+		{ "de": [ "in dem Gesundheitswesen" ], "fr": [ "dans le secteur de la santé", "dans le domaine de la santé" ] },
+		{ "de": [ "in der Medizin" ], "fr": [ "dans la médecine" ] }
+    ]
+}
