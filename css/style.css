@@ -52,6 +52,7 @@ a:visited:hover {
 	left: 0;
 	right: 0;
 	height: var(--navbar-height);
+	z-index: 999;
 }
 
 .navigation-bar * {

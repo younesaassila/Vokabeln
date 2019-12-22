@@ -1,8 +1,8 @@
 :root {
-	--primary-background-color: white;
+	--primary-background-color: #ffffff;
 	--secondary-background-color: #fafafa;
-	--primary-color: black;
-	--secondary-color: gray;
+	--primary-color: #000000;
+	--secondary-color: #808080;
 	--tertiary-color: #dcdcdc;
 	--link-color: #1e90ff;
 	--link-hover-color: #66b3ff;
