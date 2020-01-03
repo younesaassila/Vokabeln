@@ -170,6 +170,28 @@ a:visited:hover {
 }
 
 
+/* === JAVASCRIPT WARNING MESSAGE STYLE === */
+#js-warning {
+	align-items: center;
+	background-color: #d0302d;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	display: flex;
+	height: fit-content;
+	justify-content: center;
+	left: 20px;
+	padding: 10px;
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	z-index: 9999;
+}
+
+#js-warning p {
+	color: white;
+}
+
+
 /* === MAIN STYLE === */
 
 main {
