@@ -1,13 +1,13 @@
 {
 	"name": "1. Die Deutschen Erfindungen",
     "words": [
-		{ "de": [ "der Computer" ], "fr": [ "l'ordinateur" ] },
-		{ "de": [ "das Motorrad" ], "fr": [ "la moto" ] },
-		{ "de": [ "der Teebeutel" ], "fr": [ "le sachet de thé" ] },
-		{ "de": [ "das Fernsehen" ], "fr": [ "la télévision" ] },
-		{ "de": [ "der Buchdruck" ], "fr": [ "l'imprimerie" ] },
-		{ "de": [ "die Jeans" ], "fr": [ "le Jeans" ] },
-		{ "de": [ "die Glühbirne" ], "fr": [ "l'ampoule" ] },
-		{ "de": [ "das Aspirin" ], "fr": [ "l'aspirine" ] }
+			{ "de": [ "der Computer" ], "fr": [ "l'ordinateur" ] },
+			{ "de": [ "das Motorrad" ], "fr": [ "la moto" ] },
+			{ "de": [ "der Teebeutel" ], "fr": [ "le sachet de thé" ] },
+			{ "de": [ "das Fernsehen" ], "fr": [ "la télévision" ] },
+			{ "de": [ "der Buchdruck" ], "fr": [ "l'imprimerie" ] },
+			{ "de": [ "die Jeans" ], "fr": [ "le Jeans" ] },
+			{ "de": [ "die Glühbirne" ], "fr": [ "l'ampoule" ] },
+			{ "de": [ "das Aspirin" ], "fr": [ "l'aspirine" ] }
     ]
 }
