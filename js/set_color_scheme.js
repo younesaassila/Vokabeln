@@ -20,7 +20,7 @@ stylesheetColorSchemeLink.href = "/css/light.css";
 stylesheetColorSchemeLink.id = "stylesheet-color-scheme";
 stylesheetColorSchemeLink.onload = () => {
   document.documentElement.style.display = '';
-}
+};
 
 // Hide the document element to let the browser fully load the appropriate
 // stylesheet in order to avoid a 'light flash' effect if the user prefers

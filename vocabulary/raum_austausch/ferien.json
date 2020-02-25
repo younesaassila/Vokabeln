@@ -1,6 +1,6 @@
 {
 	"name": "Ferien",
-    "words": [
+	"words": [
 		{ "de": [ "chillen" ], "fr": [ "se détendre", "se relaxer" ] },
 		{ "de": [ "aus dem Alltag gehen", "den Alltag brechen" ], "fr": [ "rompre avec le quotidien" ] },
 		{ "de": [ "reisen" ], "fr": [ "voyager" ] },
@@ -16,5 +16,5 @@
 		{ "de": [ "Campingwagen" ], "fr": [ "camping-car" ] },
 		{ "de": [ "in dem Zelt" ], "fr": [ "dans la tente" ] },
 		{ "de": [ "Wohngemeinschaft" ], "fr": [ "appartement en colocation" ] }
-    ]
+	]
 }

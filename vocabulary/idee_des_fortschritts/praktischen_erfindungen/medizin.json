@@ -1,0 +1,15 @@
+{
+	"name": "2.A. in der Medizin",
+	"words": [
+		{ "de": [ "das Leben erleichtern" ], "fr": [ "faciliter la vie" ] },
+		{ "de": [ "das Röntgen" ], "fr": [ "la radiographie" ] },
+		{ "de": [ "das Medikament" ], "fr": [ "le médicament" ] },
+		{ "de": [ "die Impfung" ], "fr": [ "le vaccin" ] },
+		{ "de": [ "die Prothese" ], "fr": [ "la prothèse" ] },
+		{ "de": [ "die artifizielles Herz" ], "fr": [ "le cœur artificiel" ] },
+		{ "de": [ "das Leben verlängern" ], "fr": [ "allonger l'espérance de vie" ] },
+		{ "de": [ "die Gesundheit verbessern" ], "fr": [ "améliorer la santé" ] },
+		{ "de": [ "Krankheiten heilen" ], "fr": [ "guérir les maladies" ] },
+		{ "de": [ "pflegen" ], "fr": [ "soigner" ] }
+	]
+}

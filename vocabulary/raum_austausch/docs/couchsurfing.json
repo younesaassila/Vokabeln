@@ -1,6 +1,6 @@
 {
 	"name": "Couchsurfing",
-    "words": [
+	"words": [
 		{ "de": [ "die meisten" ], "fr": [ "la majorité" ] },
 		{ "de": [ "meistens" ], "fr": [ "la plupart du temps" ] },
 		{ "de": [ "besonders" ], "fr": [ "particulièrement" ] },
@@ -15,5 +15,5 @@
 		{ "de": [ "einen Einblick in die Kultur haben" ], "fr": [ "avoir une vue d'ensemble sur la culture" ] },
 		{ "de": [ "sparen" ], "fr": [ "économiser" ] },
 		{ "de": [ "der Sofa" ], "fr": [ "le canapé" ] }
-    ]
+	]
 }

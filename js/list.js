@@ -12,8 +12,7 @@ const container = document.getElementById("container");
 const lists = [];
 let wordCount = 0;
 
-if ((typeof paths !== 'undefined')
-&& (typeof container !== 'undefined')) {
+if ((typeof paths !== 'undefined') && (typeof container !== 'undefined')) {
   paths.forEach(path => {
     lists.push(dataAccess.getListFromPath(path));
   });

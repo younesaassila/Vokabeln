@@ -1,0 +1,14 @@
+{
+	"name": "2.D. die Wissenschaft",
+	"words": [
+		{ "de": [ "die Wissenschaft" ], "fr": [ "la science" ] },
+		{ "de": [ "der Apparat", "das Gerät" ], "fr": [ "l'appareil" ] },
+		{ "de": [ "die Firma" ], "fr": [ "l'entreprise" ] },
+		{ "de": [ "die Birne" ], "fr": [ "l'ampoule" ] },
+		{ "de": [ "die Windräder" ], "fr": [ "les éoliennes" ] },
+		{ "de": [ "die Solarzellen" ], "fr": [ "les panneaux solaires" ] },
+		{ "de": [ "die Atomkraftwerke" ], "fr": [ "les centrales nucléaires" ] },
+		{ "de": [ "der Strom" ], "fr": [ "l'électricité" ] },
+		{ "de": [ "ökologischer sein" ], "fr": [ "être écologique" ] }
+	]
+}

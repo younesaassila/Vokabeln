@@ -1,7 +1,7 @@
 {
 	"name": "Erasmus",
-    "words": [
+	"words": [
 		{ "de": [ "ein Austauschprogramme" ], "fr": [ "un programme d'échange" ] },
 		{ "de": [ "ein Fortschritt im Studium sein" ], "fr": [ "permettre un progrès au niveau des études" ] }
-    ]
+	]
 }

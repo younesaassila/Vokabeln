@@ -44,9 +44,19 @@ class DataAccess {
       "idee_des_fortschritts": [
         "vocabulary/idee_des_fortschritts/general.json",
         "vocabulary/idee_des_fortschritts/deutschen_erfindungen.json",
-        "vocabulary/idee_des_fortschritts/praktischen_erfindungen.json"
+        "vocabulary/idee_des_fortschritts/praktischen_erfindungen/general.json",
+        "vocabulary/idee_des_fortschritts/praktischen_erfindungen/medizin.json",
+        "vocabulary/idee_des_fortschritts/praktischen_erfindungen/mode.json",
+        "vocabulary/idee_des_fortschritts/praktischen_erfindungen/transport.json",
+        "vocabulary/idee_des_fortschritts/praktischen_erfindungen/wissenschaft.json",
+        "vocabulary/idee_des_fortschritts/praktischen_erfindungen/technologie.json",
+        "vocabulary/idee_des_fortschritts/praktischen_erfindungen/gefahren.json",
+        "vocabulary/idee_des_fortschritts/umwelt.json",
+      ],
+      "mythen_helden": [
+        "vocabulary/mythen_helden/general.json"
       ]
-    }
+    };
   }
 
   /**
@@ -55,8 +65,7 @@ class DataAccess {
    * @param {string} id 
    */
   getPaths(id) {
-    if ((typeof id === 'string')
-    && (typeof this.listIDs[id] !== 'undefined')) {
+    if ((typeof id === 'string') && (typeof this.listIDs[id] !== 'undefined')) {
       return this.listIDs[id];
     } else {
       return null;

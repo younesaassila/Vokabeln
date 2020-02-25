@@ -1,0 +1,20 @@
+{
+	"name": "2.C. in dem Transport",
+	"words": [
+		{ "de": [ "die öffentliche Verkehrsmittel" ], "fr": [ "les transports en commun" ] },
+		{ "de": [ "das Flugzeug" ], "fr": [ "l'avion" ] },
+		{ "de": [ "das elektrisches Fahrrad" ], "fr": [ "le vélo électrique" ] },
+		{ "de": [ "der Airbag" ], "fr": [ "l'airbag" ] },
+		{ "de": [ "das ABS System" ], "fr": [ "le système ABS" ] },
+		{ "de": [ "das autonome Auto" ], "fr": [ "la voiture autonome" ] },
+		{ "de": [ "das Raumschiff" ], "fr": [ "le vaisseau spatial" ] },
+		{ "de": [ "die Rakete" ], "fr": [ "la fusée" ] },
+		{ "de": [ "sich schneller bewegen" ], "fr": [ "se déplacer plus vite" ] },
+		{ "de": [ "Zeit gewinnen" ], "fr": [ "gagner du temps" ] },
+		{ "de": [ "weit reisen können" ], "fr": [ "pouvoir voyager loin" ] },
+		{ "de": [ "ergonomischer sein" ], "fr": [ "être plus ergonomique" ] },
+		{ "de": [ "neue Horizonte eröffnen" ], "fr": [ "ouvrir de nouveaux horizons" ] },
+		{ "de": [ "mehr Unabhängigkeit haben" ], "fr": [ "avoir plus d'indépendance" ] },
+		{ "de": [ "mehr Sicherheit haben" ], "fr": [ "avoir plus de sécurité" ] }
+	]
+}

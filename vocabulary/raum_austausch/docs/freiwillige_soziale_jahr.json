@@ -1,6 +1,6 @@
 {
 	"name": "das Freiwillige Soziale Jahr",
-    "words": [
+	"words": [
 		{ "de": [ "der Freiwillige" ], "fr": [ "le bénévole" ] },
 		{ "de": [ "sich freiwillig engagieren" ], "fr": [ "s'engager bénévolement" ] },
 		{ "de": [ "soziale Einrichtungen" ], "fr": [ "établissements sociaux" ] },
@@ -11,5 +11,5 @@
 		{ "de": [ "Freizeitheime" ], "fr": [ "centre de loisirs" ] },
 		{ "de": [ "die Fähigkeiten" ], "fr": [ "les capacités" ] },
 		{ "de": [ "Taschengeld" ], "fr": [ "argent de poche" ] }
-    ]
+	]
 }

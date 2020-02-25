@@ -1,6 +1,6 @@
 {
 	"name": "Deutschland braucht Zuwanderung",
-    "words": [
+	"words": [
 		{ "de": [ "Osteuropa" ], "fr": [ "Europe de l'Est", "Europe orientale" ] },
 		{ "de": [ "der Handel" ], "fr": [ "le commerce" ] },
 		{ "de": [ "das Gastgewerbe" ], "fr": [ "la restauration" ] },
@@ -9,5 +9,5 @@
 		{ "de": [ "Zuwanderung" ], "fr": [ "immigration" ] },
 		{ "de": [ "Fachkraft" ], "fr": [ "main d'œuvre spécialisée" ] },
 		{ "de": [ "der Mangel" ], "fr": [ "le manque" ] }
-    ]
+	]
 }

@@ -1,6 +1,6 @@
 {
 	"name": "Reisen",
-    "words": [
+	"words": [
 		{ "de": [ "die Reise" ], "fr": [ "le voyage" ] },
 		{ "de": [ "entdecken" ], "fr": [ "découvrir" ] },
 		{ "de": [ "ein fremdas Land" ], "fr": [ "un pays étranger" ] },
@@ -61,5 +61,5 @@
 		{ "de": [ "Nostalgie" ], "fr": [ "nostalgie" ] },
 		{ "de": [ "Sehnsucht" ], "fr": [ "envie", "désir" ] },
 		{ "de": [ "fühlen" ], "fr": [ "ressentir" ] }
-    ]
+	]
 }

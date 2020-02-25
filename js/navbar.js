@@ -9,7 +9,7 @@ const menu = () => {
   } else {
     navigationBar.className = 'navigation-bar';
   }
-}
+};
 
 //#endregion
 

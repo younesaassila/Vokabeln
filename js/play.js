@@ -28,7 +28,7 @@ const states = {
   ANSWERING: 'answering',
   // The player has answered the question and is provided with the correct answer.
   ANSWERED: 'answered'
-}
+};
 
 // The current state of the game.
 let state = states.ANSWERING;
@@ -65,7 +65,7 @@ const loadQuestion = () => {
   } else {
     throw new Error("Question couldn't successfully be loaded.");
   }
-}
+};
 
 // Change the UI colors and display the correct answer.
 const answerQuestion = () => {
@@ -98,7 +98,7 @@ const answerQuestion = () => {
       "The quiz object has returned 'undefined' when asked to verify the user's answer."
     );
   }
-}
+};
 
 // Display the number of questions in the browser tab's title.
 const wordCount = quiz.questions.length;

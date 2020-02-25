@@ -3,7 +3,7 @@ class Question {
     this.word = {
       'de': germanWord,
       'fr': frenchWord
-    }
+    };
     
     this.language = 'de';
   }
@@ -43,9 +43,9 @@ class Question {
   getCorrectAnswers() {
     switch (this.language) {
       case 'de':
-        return this.word['fr'];
+        return this.word.fr;
       case 'fr':
-        return this.word['de'];
+        return this.word.de;
     }
   }
 
@@ -137,7 +137,7 @@ class Question {
 
       // The number of words that returned correct in the player's answer has
       // to be at least half of the correct answer word count.
-      const threshold = Math.round(correctAnswersWords[correctAnswerIndex].length / 2);
+      let threshold = Math.round(correctAnswersWords[correctAnswerIndex].length / 2);
       
       // In case the threshold is lower than 1, set it to 1 to avoid marking
       // an answer as correct if it's not necessarily. 

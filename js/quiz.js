@@ -5,7 +5,7 @@ class Quiz {
     this.stats = {
       correctCount: 0,
       answeredCount: 0
-    }
+    };
   }
 
   /**
