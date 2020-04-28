@@ -1,0 +1,13 @@
+{
+	"name": "ⓔ Was macht er?",
+	"words": [
+		{ "de": [ "kämpfen gegen" ], "fr": [ "lutter contre" ] },
+		{ "de": [ "die Feinde" ], "fr": [ "les ennemis" ] },
+		{ "de": [ "retten" ], "fr": [ "sauver" ] },
+		{ "de": [ "die Welt" ], "fr": [ "le monde" ] },
+		{ "de": [ "sein Land" ], "fr": [ "son pays" ] },
+		{ "de": [ "die Menschen" ], "fr": [ "les humains", "les personnes" ] },
+		{ "de": [ "verteidigen" ], "fr": [ "défendre" ] },
+		{ "de": [ "schützen" ], "fr": [ "protéger" ] }
+	]
+}

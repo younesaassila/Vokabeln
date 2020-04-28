@@ -274,6 +274,14 @@ main button i {
 	margin-right: 10px;
 }
 
+main .new {
+	color: var(--new-text-color);
+	font-size: 10pt;
+	margin: 0 0 6px 0;
+	position: relative;
+	top: -6px;
+}
+
 /* Div used in index.html to display one theme's name and buttons */
 main .theme-container {
 	margin: 24px 0px 24px 0px;

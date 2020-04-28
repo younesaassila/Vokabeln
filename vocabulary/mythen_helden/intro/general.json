@@ -1,0 +1,10 @@
+{
+	"name": "Die Mythen und die Helden",
+	"words": [
+		{ "de": [ "der Held" ], "fr": [ "le héros" ] },
+		{ "de": [ "die Heldin" ], "fr": [ "l'héroïne" ] },
+		{ "de": [ "die Helden" ], "fr": [ "les héros" ] },
+		{ "de": [ "der Mythos" ], "fr": [ "le mythe" ] },
+		{ "de": [ "die Mythen" ], "fr": [ "les mythes" ] }
+	]
+}

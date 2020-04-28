@@ -1,0 +1,9 @@
+{
+	"name": "ⓑ Wo?",
+	"words": [
+		{ "de": [ "in Filmen" ], "fr": [ "dans les films" ] },
+		{ "de": [ "in Bücher" ], "fr": [ "dans les livres" ] },
+		{ "de": [ "im Kino" ], "fr": [ "au cinéma" ] },
+		{ "de": [ "am Fernsehen" ], "fr": [ "à la télévision", "à la télé" ] }
+	]
+}

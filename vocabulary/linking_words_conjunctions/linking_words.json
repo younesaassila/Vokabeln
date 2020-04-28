@@ -3,10 +3,14 @@
 	"words": [
 		{ "de": [ "In der Tat" ], "fr": [ "en effet" ] },
 		{ "de": [ "Dann" ], "fr": [ "ensuite" ] },
+		{ "de": [ "Danach" ], "fr": [ "après cela" ] },
 		{ "de": [ "Ausserdem" ], "fr": [ "de plus" ] },
 		{ "de": [ "deshalb" ], "fr": [ "c'est pourquoi" ] },
 		{ "de": [ "also" ], "fr": [ "donc" ] },
 		{ "de": [ "jedoch" ], "fr": [ "cependant" ] },
-		{ "de": [ "schließlich" ], "fr": [ "finalement" ] }
+		{ "de": [ "schließlich", "zum Schluss" ], "fr": [ "finalement" ] },
+		{ "de": [ "Meiner Meinung nach" ], "fr": [ "à mon avis" ] },
+		{ "de": [ "Heute" ], "fr": [ "aujourd'hui" ] },
+		{ "de": [ "in Zukunft" ], "fr": [ "à l'avenir" ] }
 	]
 }

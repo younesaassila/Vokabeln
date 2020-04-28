@@ -1,0 +1,9 @@
+{
+	"name": "1. Die vershiedene Helden",
+	"words": [
+		{ "de": [ "der Superheld" ], "fr": [ "le super-héros" ] },
+		{ "de": [ "der Alltag" ], "fr": [ "la vie de tous les jours", "le quotidien" ] },
+		{ "de": [ "die Alltagshelden" ], "fr": [ "les héros de tous les jours", "les héros du quotidien" ] },
+		{ "de": [ "die Legende" ], "fr": [ "la légende" ] }
+	]
+}

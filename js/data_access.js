@@ -54,7 +54,14 @@ class DataAccess {
         "vocabulary/idee_des_fortschritts/umwelt.json",
       ],
       "mythen_helden": [
-        "vocabulary/mythen_helden/general.json"
+        "vocabulary/mythen_helden/intro/general.json",
+        "vocabulary/mythen_helden/intro/wer.json",
+        "vocabulary/mythen_helden/intro/wo.json",
+        "vocabulary/mythen_helden/intro/aussehen.json",
+        "vocabulary/mythen_helden/intro/eigenschaften.json",
+        "vocabulary/mythen_helden/intro/was_macht_er.json",
+        "vocabulary/mythen_helden/intro/wie_reagieren_die_fans.json",
+        "vocabulary/mythen_helden/vershiedene_helden/general.json"
       ]
     };
   }
