@@ -39,7 +39,8 @@ class DataAccess {
       ],
       "linking_words_conjunctions": [
         "vocabulary/linking_words_conjunctions/linking_words.json",
-        "vocabulary/linking_words_conjunctions/coordinating_conjunctions.json"
+        "vocabulary/linking_words_conjunctions/coordinating_conjunctions.json",
+        "vocabulary/linking_words_conjunctions/subordinating_conjunctions.json"
       ],
       "idee_des_fortschritts": [
         "vocabulary/idee_des_fortschritts/general.json",

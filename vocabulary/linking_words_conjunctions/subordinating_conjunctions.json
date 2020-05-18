@@ -1,0 +1,11 @@
+{
+	"name": "Conjonctions de subordination",
+	"words": [
+		{ "de": [ "weil" ], "fr": [ "parce que" ] },
+		{ "de": [ "obwohl", "obgleich", "obschon" ], "fr": [ "bien que" ] },
+		{ "de": [ "Da" ], "fr": [ "comme" ] },
+		{ "de": [ "wenn" ], "fr": [ "si" ] },
+		{ "de": [ "wann" ], "fr": [ "quand" ] },
+		{ "de": [ "daß" ], "fr": [ "que" ] }
+	]
+}
