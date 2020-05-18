@@ -1,5 +1,5 @@
 {
-	"name": "Mots de liaison",
+	"name": "Mots de liaison (+ verbe + sujet + ...)",
 	"words": [
 		{ "de": [ "In der Tat" ], "fr": [ "en effet" ] },
 		{ "de": [ "Dann" ], "fr": [ "ensuite" ] },
