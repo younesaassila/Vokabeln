@@ -36,13 +36,46 @@
         <input id="quiz-text-input" type="text" placeholder="La réponse est..."
         autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" disabled><br>
         <button id="quiz-button-input">Vérifier</button><br>
-        <small>
-          <a href="/feedback.html"><i class="far fa-question-circle"></i>
-          Un problème avec cette traduction ? Clique-ici !</a>
+        <small id="feedback-button" tabindex="0">
+          <i class="fas fa-exclamation"></i>
+          Signaler une erreur de traduction
         </small>
         <br>
         <button id="quiz-end-button" disabled>Terminer l'entraînement</button>
       </section>
+      <div id="feedback-modal" class="modal" role="dialog">
+        <div class="content">
+          <div class="title-bar">
+            <p id="title">Signaler une erreur de traduction</p>
+            <p id="close-button"><i class="fas fa-times"></i></p>
+          </div>
+          <div id="body-inputs" class="body">
+            <p>
+              Corrige les erreurs que tu as repérées puis cliques sur le
+              bouton « Envoyer ».
+            </p>
+            <input id="input-original" type="text" placeholder="Mot d'origine et synonymes"
+            autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false"><br>
+            <input id="input-translations" type="text" placeholder="Traductions"
+            autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false"><br>
+            <button id="send-button">Envoyer</button>
+          </div>
+          <div id="body-success" class="body">
+            <i class="far fa-check-circle modal-icon"></i>
+            <p>
+              Ton signalement a bien été envoyé. Merci de ta contribution !
+            </p>
+            <button id="okay-button">OK</button>
+          </div>
+          <div id="body-error" class="body">
+            <i class="far fa-times-circle modal-icon"></i>
+            <p>
+              Une erreur est survenue lors de l'envoi de ton signalement.
+            </p>
+            <button id="retry-button">Réessayer</button>
+          </div>
+        </div>
+      </div>
       <section id="results-container">
         <p id="results-yourscoreis">Ton score est :</p>
         <h1 id="results-score"></h1>
@@ -56,6 +89,24 @@
     <script>$(function(){$("#navbar").load("navbar.html");});</script>
     <!-- Load Font Awesome icons -->
     <script src="https://kit.fontawesome.com/39ed21dbfe.js" crossorigin="anonymous"></script>
+    <!-- Load Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDsUXVgYbOcsxZ2uuk6isHUQtmrGFDwA8k",
+        authDomain: "vokabeln-fr.firebaseapp.com",
+        databaseURL: "https://vokabeln-fr.firebaseio.com",
+        projectId: "vokabeln-fr",
+        storageBucket: "vokabeln-fr.appspot.com",
+        messagingSenderId: "444989812640",
+        appId: "1:444989812640:web:11ed5696f393fbae1e3ec5"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <!-- Other scripts -->
     <script src="/js/data_access.js"></script>
     <script src="/js/verified_answer_args.js"></script>
