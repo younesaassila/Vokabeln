@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap"> 
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap"
+    />
     <!-- Set the preferred color scheme -->
-    <script src="/js/set_color_scheme.js"></script>
-    <link rel="stylesheet" href="/css/style.css">
+    <script src="js/set_color_scheme.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Global Site Tag ‒ Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149451988-2"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-149451988-2"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'UA-149451988-2', { 'anonymize_ip': true });
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-149451988-2", { anonymize_ip: true });
     </script>
     <title>Vokabeln! ‒ Entraînement</title>
   </head>
@@ -33,14 +44,22 @@
       <section id="quiz-container">
         <p class="quiz-instruction">Veuillez patienter.</p>
         <h2 class="quiz-word">Chargement...</h2>
-        <input id="quiz-text-input" type="text" placeholder="La réponse est..."
-        autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" disabled><br>
-        <button id="quiz-button-input">Vérifier</button><br>
+        <input
+          id="quiz-text-input"
+          type="text"
+          placeholder="La réponse est..."
+          autocapitalize="off"
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+          disabled
+        /><br />
+        <button id="quiz-button-input">Vérifier</button><br />
         <small id="feedback-button" tabindex="0">
           <i class="fas fa-exclamation"></i>
           Signaler une erreur de traduction
         </small>
-        <br>
+        <br />
         <button id="quiz-end-button" disabled>Terminer l'entraînement</button>
       </section>
       <div id="feedback-modal" class="modal" role="dialog">
@@ -51,27 +70,37 @@
           </div>
           <div id="body-inputs" class="body">
             <p>
-              Corrige les erreurs que tu as repérées puis clique sur le
-              bouton « Envoyer ».
+              Corrige les erreurs que tu as repérées puis clique sur le bouton «
+              Envoyer ».
             </p>
-            <input id="input-original" type="text" placeholder="Mot d'origine et synonymes"
-            autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false"><br>
-            <input id="input-translations" type="text" placeholder="Traductions"
-            autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false"><br>
+            <input
+              id="input-original"
+              type="text"
+              placeholder="Mot d'origine et synonymes"
+              autocapitalize="off"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+            /><br />
+            <input
+              id="input-translations"
+              type="text"
+              placeholder="Traductions"
+              autocapitalize="off"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+            /><br />
             <button id="send-button">Envoyer</button>
           </div>
           <div id="body-success" class="body">
             <i class="far fa-check-circle modal-icon"></i>
-            <p>
-              Ton signalement a bien été envoyé. Merci de ta contribution !
-            </p>
+            <p>Ton signalement a bien été envoyé. Merci de ta contribution !</p>
             <button id="okay-button">OK</button>
           </div>
           <div id="body-error" class="body">
             <i class="far fa-times-circle modal-icon"></i>
-            <p>
-              Une erreur est survenue lors de l'envoi de ton signalement.
-            </p>
+            <p>Une erreur est survenue lors de l'envoi de ton signalement.</p>
             <button id="retry-button">Réessayer</button>
           </div>
         </div>
@@ -85,10 +114,17 @@
       </section>
     </main>
     <!-- Load navigation bar -->
-    <script src="/js/libraries/jquery-3.4.1.min.js"></script>
-    <script>$(function(){$("#navbar").load("navbar.html");});</script>
+    <script src="js/libraries/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function () {
+        $("#navbar").load("navbar.html");
+      });
+    </script>
     <!-- Load Font Awesome icons -->
-    <script src="https://kit.fontawesome.com/39ed21dbfe.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/39ed21dbfe.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Load Firebase -->
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
@@ -102,16 +138,16 @@
         projectId: "vokabeln-fr",
         storageBucket: "vokabeln-fr.appspot.com",
         messagingSenderId: "444989812640",
-        appId: "1:444989812640:web:11ed5696f393fbae1e3ec5"
+        appId: "1:444989812640:web:11ed5696f393fbae1e3ec5",
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
     </script>
     <!-- Other scripts -->
-    <script src="/js/data_access.js"></script>
-    <script src="/js/verified_answer_args.js"></script>
-    <script src="/js/question.js"></script>
-    <script src="/js/quiz.js"></script>
-    <script src="/js/play.js"></script>
+    <script src="js/data_access.js"></script>
+    <script src="js/verified_answer_args.js"></script>
+    <script src="js/question.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/play.js"></script>
   </body>
 </html>

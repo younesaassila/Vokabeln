@@ -1,13 +1,13 @@
 //#region NAVIGATION BAR MENU
 
 // The navigation bar element.
-const navigationBar = document.getElementById('navbar');
+const navigationBar = document.getElementById("navbar");
 // Toggle the nav menu on mobile devices.
 const menu = () => {
-  if (navigationBar.className === 'navigation-bar') {
-    navigationBar.className += ' responsive';
+  if (navigationBar.className === "navigation-bar") {
+    navigationBar.className += " responsive";
   } else {
-    navigationBar.className = 'navigation-bar';
+    navigationBar.className = "navigation-bar";
   }
 };
 
@@ -16,11 +16,11 @@ const menu = () => {
 //#region THEME MANAGEMENT
 
 // Theme management's HTML elements.
-const themeSwitch = document.querySelector('header .theme-switch');
+const themeSwitch = document.querySelector("header .theme-switch");
 const themeCheckbox = document.querySelector(
   'header .theme-switch input[type="checkbox"]'
 );
-const themeIcon = document.querySelector('header #moon-icon');
+const themeIcon = document.querySelector("header #moon-icon");
 
 switch (localStorage.getItem("theme")) {
   case "dark":
@@ -36,21 +36,25 @@ switch (localStorage.getItem("theme")) {
 }
 
 // Update the current theme when the user ticks/unticks the checkbox.
-themeCheckbox.addEventListener("change", (e) => {
-  const stylesheetLink = document.getElementById("stylesheet-color-scheme");
-  if (e.target.checked) {
-    // Enable dark theme.
-    localStorage.setItem("theme", "dark");
-    themeIcon.className = "fas fa-moon";
-    themeSwitch.setAttribute("title", "Désactiver le thème sombre");
-    stylesheetLink.href = "/css/dark.css";
-  } else {
-    // Enable light theme.
-    localStorage.setItem("theme", "light");
-    themeIcon.className = "far fa-moon";
-    themeSwitch.setAttribute("title", "Activer le thème sombre");
-    stylesheetLink.href = "/css/light.css"
-  }
-}, false);
+themeCheckbox.addEventListener(
+  "change",
+  (e) => {
+    const stylesheetLink = document.getElementById("stylesheet-color-scheme");
+    if (e.target.checked) {
+      // Enable dark theme.
+      localStorage.setItem("theme", "dark");
+      themeIcon.className = "fas fa-moon";
+      themeSwitch.setAttribute("title", "Désactiver le thème sombre");
+      stylesheetLink.href = "css/dark.css";
+    } else {
+      // Enable light theme.
+      localStorage.setItem("theme", "light");
+      themeIcon.className = "far fa-moon";
+      themeSwitch.setAttribute("title", "Activer le thème sombre");
+      stylesheetLink.href = "css/light.css";
+    }
+  },
+  false
+);
 
 //#endregion

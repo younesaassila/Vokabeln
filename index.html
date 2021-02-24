@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap"
+    />
     <!-- Set the preferred color scheme -->
-    <script src="/js/set_color_scheme.js"></script>
-    <link rel="stylesheet" href="/css/style.css">
+    <script src="js/set_color_scheme.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Global Site Tag ‒ Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149451988-2"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-149451988-2"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'UA-149451988-2', { 'anonymize_ip': true });
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-149451988-2", { anonymize_ip: true });
     </script>
     <title>Vokabeln!</title>
   </head>
@@ -42,8 +53,14 @@
         <p>Choisis un thème ci-dessous pour commencer à t'exercer.</p>
         <div class="theme-container">
           <h3>🌍 Raum und Austausch</h3>
-          <button class="button-list" onclick="list('raum_austausch:*')"></button>
-          <button class="button-play" onclick="play('raum_austausch:*')"></button>
+          <button
+            class="button-list"
+            onclick="list('raum_austausch:*')"
+          ></button>
+          <button
+            class="button-play"
+            onclick="play('raum_austausch:*')"
+          ></button>
         </div>
         <div class="theme-container">
           <h3>🌍📚 Raum und Austausch ‒ Leçon seulement</h3>
@@ -52,18 +69,36 @@
         </div>
         <div class="theme-container">
           <h3>🌍📄 Raum und Austausch ‒ Documents seulement</h3>
-          <button class="button-list" onclick="list('raum_austausch:docs')"></button>
-          <button class="button-play" onclick="play('raum_austausch:docs')"></button>
+          <button
+            class="button-list"
+            onclick="list('raum_austausch:docs')"
+          ></button>
+          <button
+            class="button-play"
+            onclick="play('raum_austausch:docs')"
+          ></button>
         </div>
         <div class="theme-container">
           <h3>🔗 Mots de liaison et conjonctions</h3>
-          <button class="button-list" onclick="list('linking_words_conjunctions')"></button>
-          <button class="button-play" onclick="play('linking_words_conjunctions')"></button>
+          <button
+            class="button-list"
+            onclick="list('linking_words_conjunctions')"
+          ></button>
+          <button
+            class="button-play"
+            onclick="play('linking_words_conjunctions')"
+          ></button>
         </div>
         <div class="theme-container">
           <h3>💡 Die Idee des Fortschritts</h3>
-          <button class="button-list" onclick="list('idee_des_fortschritts')"></button>
-          <button class="button-play" onclick="play('idee_des_fortschritts')"></button>
+          <button
+            class="button-list"
+            onclick="list('idee_des_fortschritts')"
+          ></button>
+          <button
+            class="button-play"
+            onclick="play('idee_des_fortschritts')"
+          ></button>
         </div>
         <div class="theme-container">
           <h3>🏹 Die Mythen und die Helden</h3>
@@ -73,11 +108,18 @@
       </section>
     </main>
     <!-- Load navigation bar -->
-    <script src="/js/libraries/jquery-3.4.1.min.js"></script>
-    <script>$(function(){$("#navbar").load("navbar.html");});</script>
+    <script src="js/libraries/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function () {
+        $("#navbar").load("navbar.html");
+      });
+    </script>
     <!-- Load Font Awesome icons -->
-    <script src="https://kit.fontawesome.com/39ed21dbfe.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/39ed21dbfe.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Other scripts -->
-    <script src="/js/index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
